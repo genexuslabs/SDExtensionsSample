@@ -1,0 +1,60 @@
+apply from: 'ext.gradle'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.1.2'
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion ANDROID_COMPILE_SDK_VERSION
+    buildToolsVersion ANDROID_BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        minSdkVersion ANDROID_MIN_SDK_VERSION
+        targetSdkVersion ANDROID_TARGET_SDK_VERSION
+        versionCode 1
+        versionName "1.0"
+    }
+
+    compileOptions {
+        sourceCompatibility ANDROID_JAVA_VERSION
+        targetCompatibility ANDROID_JAVA_VERSION
+    }
+}
+
+repositories {
+    maven { url "file:///${System.env.GENEXUS_HOME}/Android/MavenRepositories/genexusRepository" }
+    maven { url "file:///${System.env.GENEXUS_HOME}/Android/MavenRepositories/thirdpartiesRepository" }
+}
+
+dependencies {
+    compile 'com.genexus:FlexibleClient:1.0'
+}
+
+apply plugin: 'maven'
+
+project.version = '1.0'
+project.group = 'com.example'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "file:///${System.env.GENEXUS_HOME}/Android/MavenRepositories/thirdpartiesRepository")
+        }
+    }
+
+    task androidSourcesJar(type: Jar) {
+        classifier = 'sources'
+        from android.sourceSets.main.java.sourceFiles
+    }
+
+    artifacts {
+        archives androidSourcesJar
+    }
+}
