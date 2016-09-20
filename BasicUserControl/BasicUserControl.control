@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<ControlDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!-- Basic information -->
+	<Id>44bda26b-9309-45fd-8972-0b35b080aff9</Id>
+	<ObjClass>BASICUSERCONTROL</ObjClass>
+	<Version>0.1.0</Version>
+	<Name>BasicUserControl</Name>
+	<Description>Basic User Control</Description>
+	<IncludeInControlInfo>false</IncludeInControlInfo>
+	<ToolboxIcon>basic_user_control.ico</ToolboxIcon>
+	<DesignRender>basic_user_control.png</DesignRender>
+	<AutoGrowSupported>false</AutoGrowSupported>
+
+	<!-- Use <ControlType>List</ControlType> if it's a List User Control.
+ 		 Otherwise, the default type is Item User Controls -->
+
+	<!-- Properties, events & methods -->
+	<PropertiesDefinition>BasicUserControlProperties.xml</PropertiesDefinition>
+	<Events>
+		<Event>EventOne</Event>
+		<Event>EventTwo</Event>
+	</Events>
+	<Methods>
+		<Method>
+			<Name>MethodOne</Name>
+			<Signature>MethodOne(param1: Character)</Signature>
+			<Parameters>
+				<Parameter>Character</Parameter>
+			</Parameters>
+		</Method>
+		<Method>
+			<Name>MethodTwo</Name>
+			<Signature>MethodTwo(param1: Numeric, param2: Numeric)</Signature>
+			<Parameters>
+				<Parameter>Numeric</Parameter>
+				<Parameter>Numeric</Parameter>
+			</Parameters>
+		</Method>
+	</Methods>
+
+	<!-- Declare a custom base class for this control -->
+	<ThemeExtensions/>
+
+	<!-- References an XPZ that is imported when using this control -->
+	<GxResources/>
+
+	<!-- Declare actions to be executed upon placing the control on the editor -->
+	<Actions/>
+
+	<!-- Platforms supported -->
+	<Platforms>
+		<Platform>SmartDevices</Platform>
+	</Platforms>
+
+	<!-- Android Specific -->
+	<Android_ClassName>com.example.BasicUserControl</Android_ClassName>
+	<Android_IsScrollable>false</Android_IsScrollable>
+</ControlDefinition>

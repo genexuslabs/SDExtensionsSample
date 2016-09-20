@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Content xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Object id="BASICUSERCONTROL">
+		<Group>
+			<Name>General</Name>
+			<Type>Main</Type>
+			<Children>
+				<!--
+				<Prop>
+					<Id>Key</Id>
+					<Name>Key</Name>
+					<Type>Text</Type>
+					<Default>200</Default>
+				</Prop>
+				-->
+			</Children>
+		</Group>
+	</Object>
+</Content>
