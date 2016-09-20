@@ -5,11 +5,11 @@ import java.util.List;
 import com.artech.application.MyApplication;
 import com.artech.externalapi.ExternalApi;
 
-public class BasicEO extends ExternalApi {
+public class BasicExternalObject extends ExternalApi {
 	private static final String METHOD_HELLO = "Hello";
 	private static final String METHOD_MESSAGE = "Message";
 
-	public BasicEO() {
+	public BasicExternalObject() {
 		addSimpleMethodHandler(METHOD_HELLO, 0, mMethodHello);
 		addSimpleMethodHandler(METHOD_MESSAGE, 1, mMethodMessage);
 	}

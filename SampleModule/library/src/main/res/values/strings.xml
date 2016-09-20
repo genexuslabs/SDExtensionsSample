@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="hello_message">Hello World!</string>
+    <string name="welcome_message">"Hello %1$s!"</string>
 </resources>

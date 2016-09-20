@@ -14,29 +14,18 @@
 	<!-- Use <ControlType>List</ControlType> if it's a List User Control.
  		 Otherwise, the default type is Item User Controls -->
 
-	<!-- Properties, events & methods -->
+	<!-- Properties, methods & events -->
 	<PropertiesDefinition>BasicUserControlProperties.xml</PropertiesDefinition>
-	<Events>
-		<Event>EventOne</Event>
-		<Event>EventTwo</Event>
-	</Events>
 	<Methods>
 		<Method>
-			<Name>MethodOne</Name>
-			<Signature>MethodOne(param1: Character)</Signature>
+			<Name>SetName</Name>
+			<Signature>SetName(name: Character)</Signature>
 			<Parameters>
 				<Parameter>Character</Parameter>
 			</Parameters>
 		</Method>
-		<Method>
-			<Name>MethodTwo</Name>
-			<Signature>MethodTwo(param1: Numeric, param2: Numeric)</Signature>
-			<Parameters>
-				<Parameter>Numeric</Parameter>
-				<Parameter>Numeric</Parameter>
-			</Parameters>
-		</Method>
 	</Methods>
+	<Events/>
 
 	<!-- Declare a custom base class for this control -->
 	<ThemeExtensions/>

@@ -1,0 +1,21 @@
+apply plugin: 'maven'
+
+project.version = '1.0'
+project.group = 'com.example'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "file:///${System.env.GENEXUS_HOME}/Android/MavenRepositories/thirdpartiesRepository")
+        }
+    }
+
+    task androidSourcesJar(type: Jar) {
+        classifier = 'sources'
+        from android.sourceSets.main.java.sourceFiles
+    }
+
+    artifacts {
+        archives androidSourcesJar
+    }
+}
