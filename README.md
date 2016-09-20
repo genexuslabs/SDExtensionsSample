@@ -5,7 +5,7 @@ This repository contains samples of a `User Control` and a `External Object` for
 
 ### Deploy the Genexus Android Module to Genexus
 - Set the environment variable `GENEXUS_HOME` to your Genexus installation directory.
-- Run `gradlew uploadArchives` from the `ModuleSample` directory.
+- Run `gradlew uploadArchives` from the `SampleModule` directory.
 - Modify the following templates from the Android generator:
     - In the file `%GENEXUS_HOME%\Android\Templates\ApplicationProject\build.gradle`, add `compile 'com.example:library:1.0'` to the `dependencies` block.
     - In the file `%GENEXUS_HOME%\Android\Templates\src\main\java\com\genexus\namespace\MainApplication.java`, add `registerModule(new com.example.samplemodule.SampleModule());` before the call to `UserControls.initializeUserControls();`.
