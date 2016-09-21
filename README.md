@@ -1,5 +1,9 @@
 # Android Extensions Sample
-This repository contains samples of a `User Control` and a `External Object` for the Android generator.
+This repository contains:
+- `\BasicUserControl`: A sample of a `User Control` definition.
+- `\BasicExternalObject`: A sample of a `External Object` definition.
+- `\SampleModule`: A sample Android Library project of a `Genexus Module` that implements the two extensions previously defined.
+- `\SampleApp`: A sample app that lets you try out both extensions.
 
 ## Instructions
 
