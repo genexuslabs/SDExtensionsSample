@@ -36,3 +36,5 @@ To try out the _BasicUserControl_ and _BasicExternalObject_ samples you may wish
 ### External Objects
 - [External Object definition](http://wiki.genexus.com/commwiki/servlet/wiki?6148)
 
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE.txt) file for more details.
