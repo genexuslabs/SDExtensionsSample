@@ -1,9 +1,16 @@
 # Android Extensions Sample
-This repository contains:
-- `\BasicUserControl`: A sample of a `User Control` definition.
-- `\BasicExternalObject`: A sample of a `External Object` definition.
-- `\SampleModule`: A sample Android Library project of a `Genexus Module` that implements the two extensions previously defined.
-- `\SampleApp`: A sample app that lets you try out both extensions.
+This sample contains:
+- A `User Control` definition.
+- An `External Object` definition.
+- An Android Library project of a `Genexus Module` that implements the two previously defined extensions.
+- An app that lets you try out both extensions.
+
+## Requirements
+- Genexus 15
+- JDK
+- Android SDK
+
+For more details see [Android Requirements for Genexus 15](http://wiki.genexus.com/commwiki/servlet/wiki?14449).
 
 ## Instructions
 
