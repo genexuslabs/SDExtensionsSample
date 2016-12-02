@@ -1,0 +1,12 @@
+<ExtensionLibrary Name="SampleLibrary">
+	<Implements>
+		<ExternalObject name="BasicExternalObject"/>
+		<UserControl name="BasicUserControl"/>
+	</Implements>
+	<Android>
+		<GroupId>com.example</GroupId>
+		<Name>library</Name>
+		<Version>1.0</Version>
+		<ModuleClass>com.example.samplemodule.SampleModule</ModuleClass>
+	</Android>
+</ExtensionLibrary>

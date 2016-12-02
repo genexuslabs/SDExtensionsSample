@@ -2,7 +2,8 @@
 This sample contains:
 - A `User Control` definition.
 - An `External Object` definition.
-- An Android Library project of a `Genexus Module` that implements the two previously defined extensions.
+- An `Android Library` project of a `Genexus Module` that implements the two previously defined extensions.
+- An `Genexus Library` definition which declares the `Android Library` which implements the `User Control` and `External Object` in Android and its corresponding `Genexus Module` name.
 - An app that lets you try out both extensions.
 
 ## Requirements
@@ -17,15 +18,15 @@ For more details see [Android Requirements for Genexus 15](http://wiki.genexus.c
 ### Deploy the Genexus Android Module to Genexus
 - Set the following environment variables:
     - `GENEXUS_HOME` to your Genexus installation directory.
-    - `ANDROID_HOME` to your Android SDK directory. 
+    - `ANDROID_HOME` to your Android SDK directory.
 - Run the command `gradlew uploadArchives` from the `SampleModule` directory.
-- Modify the following templates from the Android generator:
-    - Add the line `compile 'com.example:library:1.0'` inside the `dependencies` block in the file:  `%GENEXUS_HOME%\Android\Templates\ApplicationProject\build.gradle`
-    - Add the line `registerModule(new com.example.samplemodule.SampleModule());` right before the call to `UserControls.initializeUserControls();` in the file:  `%GENEXUS_HOME%\Android\Templates\ApplicationProject\src\main\java\com\genexus\namespace\MainApplication.java`
 
 ### Import the User Control definition to Genexus
 - Copy the `BasicUserControl` directory to `%GENEXUS_HOME%\UserControls`.
 - Run `genexus.exe /install`.
+
+### Import the Genexus Library definition to Genexus
+- Copy the `SampleLibrary` directory to `%GENEXUS_HOME%\Libraries`.
 
 ### Import the External Object definition to Genexus
 - Open Genexus.
