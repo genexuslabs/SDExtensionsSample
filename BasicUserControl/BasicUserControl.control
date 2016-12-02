@@ -25,7 +25,10 @@
 			</Parameters>
 		</Method>
 	</Methods>
-	<Events/>
+
+	<Events>
+		 <Event>OnTap(Numeric)</Event>
+	</Events>
 
 	<!-- Declare a custom base class for this control -->
 	<ThemeExtensions/>

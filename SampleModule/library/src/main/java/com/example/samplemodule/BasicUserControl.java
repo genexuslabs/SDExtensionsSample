@@ -2,23 +2,38 @@ package com.example.samplemodule;
 
 import java.util.List;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.view.View;
 import android.widget.TextView;
 
+import com.artech.actions.UIContext;
 import com.artech.base.controls.IGxControlRuntime;
+import com.artech.base.metadata.ActionDefinition;
+import com.artech.base.metadata.ActionParameter;
 import com.artech.base.metadata.layout.LayoutItemDefinition;
+import com.artech.base.model.Entity;
 import com.artech.controls.IGxEdit;
+import com.artech.fragments.IDataView;
 import com.artech.ui.Coordinator;
 import com.example.genexusmodule.R;
 
+@SuppressLint("ViewConstructor")
 public class BasicUserControl extends TextView implements IGxEdit,
 														  IGxControlRuntime {
 	private final static String METHOD_SET_NAME = "SetName";
+	private final static String EVENT_ON_TAP = "OnTap";
+	private final Coordinator mCoordinator;
+
 	private String mName;
+	private int tapCount;
 
 	public BasicUserControl(Context context, Coordinator coordinator, LayoutItemDefinition definition) {
 		super(context);
+		mCoordinator = coordinator;
+		tapCount = 0;
+		setOnClickListener(mOnClickListener);
 	}
 
 	@Override
@@ -83,4 +98,27 @@ public class BasicUserControl extends TextView implements IGxEdit,
 		mName = name;
 		setText(getContext().getString(R.string.welcome_message, name));
 	}
+
+	public void runOnTapEvent() {
+		UIContext context = mCoordinator.getUIContext();
+		IDataView dataView = context.getDataView();
+
+		ActionDefinition actionDef = mCoordinator.getControlEventHandler(this, EVENT_ON_TAP);
+		Entity contextEntity = dataView.getContextEntity();
+
+		for (ActionParameter param : actionDef.getEventParameters()) {
+			String paramName = param.getValueDefinition().getName();
+			contextEntity.setProperty(paramName, tapCount);
+		}
+
+		context.getActivityController().runAction(context, actionDef, contextEntity);
+	}
+
+	private final View.OnClickListener mOnClickListener = new OnClickListener() {
+		@Override
+		public void onClick(View v) {
+			tapCount++;
+			runOnTapEvent();
+		}
+	};
 }
