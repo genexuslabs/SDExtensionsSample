@@ -7,7 +7,7 @@ This sample contains:
 - An app that lets you try out both extensions.
 
 ## Requirements
-- Genexus 15
+- Genexus 15 (**Upgrade 3** or later)
 - JDK
 - Android SDK
 
