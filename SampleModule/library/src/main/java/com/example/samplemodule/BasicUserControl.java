@@ -100,18 +100,14 @@ public class BasicUserControl extends TextView implements IGxEdit,
 	}
 
 	public void runOnTapEvent() {
-		UIContext context = mCoordinator.getUIContext();
-		IDataView dataView = context.getDataView();
-
 		ActionDefinition actionDef = mCoordinator.getControlEventHandler(this, EVENT_ON_TAP);
-		Entity contextEntity = dataView.getContextEntity();
 
 		for (ActionParameter param : actionDef.getEventParameters()) {
 			String paramName = param.getValueDefinition().getName();
-			contextEntity.setProperty(paramName, tapCount);
+			mCoordinator.setValue(paramName, tapCount);
 		}
 
-		context.getActivityController().runAction(context, actionDef, contextEntity);
+		mCoordinator.runControlEvent(this, EVENT_ON_TAP);
 	}
 
 	private final View.OnClickListener mOnClickListener = new OnClickListener() {
