@@ -8,20 +8,18 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
 
-import com.artech.actions.UIContext;
 import com.artech.base.controls.IGxControlRuntime;
 import com.artech.base.metadata.ActionDefinition;
 import com.artech.base.metadata.ActionParameter;
 import com.artech.base.metadata.layout.LayoutItemDefinition;
-import com.artech.base.model.Entity;
 import com.artech.controls.IGxEdit;
-import com.artech.fragments.IDataView;
 import com.artech.ui.Coordinator;
 import com.example.genexusmodule.R;
 
 @SuppressLint("ViewConstructor")
 public class BasicUserControl extends TextView implements IGxEdit,
 														  IGxControlRuntime {
+	final static String NAME = "BasicUserControl";
 	private final static String METHOD_SET_NAME = "SetName";
 	private final static String EVENT_ON_TAP = "OnTap";
 	private final Coordinator mCoordinator;

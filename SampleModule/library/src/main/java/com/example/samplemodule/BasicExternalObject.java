@@ -10,8 +10,9 @@ import com.artech.externalapi.ExternalApi;
 import com.artech.externalapi.ExternalApiResult;
 
 public class BasicExternalObject extends ExternalApi {
-	private static final String METHOD_HELLO = "Hello";
-	private static final String METHOD_MESSAGE = "Message";
+	final static String NAME = "BasicExternalObject";
+	private final static String METHOD_HELLO = "Hello";
+	private final static String METHOD_MESSAGE = "Message";
 
 	public BasicExternalObject() {
 		addMethodHandler(METHOD_HELLO, 0, mMethodHello);

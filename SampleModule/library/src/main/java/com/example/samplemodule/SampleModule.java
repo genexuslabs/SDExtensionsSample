@@ -13,13 +13,13 @@ public class SampleModule implements GenexusModule {
 	@Override
 	public void initialize(Context context) {
 		ExternalApiDefinition basicExternalObject = new ExternalApiDefinition(
-				BasicExternalObject.class.getSimpleName(),
+				BasicExternalObject.NAME,
 				BasicExternalObject.class
 		);
 		ExternalApiFactory.addApi(basicExternalObject);
 
 		UserControlDefinition basicUserControl = new UserControlDefinition(
-				BasicUserControl.class.getSimpleName(),
+				BasicUserControl.NAME,
 				BasicUserControl.class
 		);
 		UcFactory.addControl(basicUserControl);
