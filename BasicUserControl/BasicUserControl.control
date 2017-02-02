@@ -43,8 +43,4 @@
 	<Platforms>
 		<Platform>SmartDevices</Platform>
 	</Platforms>
-
-	<!-- Android Specific -->
-	<Android_ClassName>com.example.BasicUserControl</Android_ClassName>
-	<Android_IsScrollable>false</Android_IsScrollable>
 </ControlDefinition>
