@@ -26,7 +26,4 @@ dependencies {
     compile 'com.genexus:FlexibleClient:1.0'
 }
 
-project.group = 'com.example'
-project.version = '1.0'
-
 apply from: rootProject.file('gradle-mvn-push.gradle')
