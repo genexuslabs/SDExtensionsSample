@@ -5,6 +5,7 @@ import java.util.List;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
 import android.widget.TextView;
 
@@ -17,7 +18,7 @@ import com.artech.ui.Coordinator;
 import com.example.genexusmodule.R;
 
 @SuppressLint("ViewConstructor")
-public class BasicUserControl extends TextView implements IGxEdit,
+public class BasicUserControl extends AppCompatTextView implements IGxEdit,
 														  IGxControlRuntime {
 	final static String NAME = "BasicUserControl";
 	private final static String METHOD_SET_NAME = "SetName";
