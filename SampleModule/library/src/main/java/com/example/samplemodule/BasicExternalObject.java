@@ -6,7 +6,6 @@ import android.support.annotation.NonNull;
 
 import com.artech.actions.ActionResult;
 import com.artech.actions.ApiAction;
-import com.artech.application.MyApplication;
 import com.artech.base.services.Services;
 import com.artech.externalapi.ExternalApi;
 import com.artech.externalapi.ExternalApiResult;
