@@ -5,7 +5,8 @@ import java.util.List;
 import android.support.annotation.NonNull;
 
 import com.artech.actions.ActionResult;
-import com.artech.application.MyApplication;
+import com.artech.actions.ApiAction;
+import com.artech.base.services.Services;
 import com.artech.externalapi.ExternalApi;
 import com.artech.externalapi.ExternalApiResult;
 
@@ -14,7 +15,8 @@ public class BasicExternalObject extends ExternalApi {
 	private final static String METHOD_HELLO = "Hello";
 	private final static String METHOD_MESSAGE = "Message";
 
-	public BasicExternalObject() {
+	public BasicExternalObject(ApiAction action) {
+		super(action);
 		addMethodHandler(METHOD_HELLO, 0, mMethodHello);
 		addMethodHandler(METHOD_MESSAGE, 1, mMethodMessage);
 	}
@@ -22,7 +24,7 @@ public class BasicExternalObject extends ExternalApi {
 	private final IMethodInvoker mMethodHello = new IMethodInvoker() {
 		@Override
 		public @NonNull ExternalApiResult invoke(List<Object> parameters) {
-			MyApplication.getInstance().showMessage(getContext().getString(com.example.genexusmodule.R.string.hello_message));
+			Services.Messages.showMessage(getContext().getString(com.example.genexusmodule.R.string.hello_message));
 			return new ExternalApiResult(ActionResult.SUCCESS_CONTINUE);
 		}
 	};
@@ -31,7 +33,7 @@ public class BasicExternalObject extends ExternalApi {
 		@Override
 		public @NonNull ExternalApiResult invoke(List<Object> parameters) {
 			final String text = (String) parameters.get(0);
-			MyApplication.getInstance().showMessage(text);
+			Services.Messages.showMessage(text);
 			return new ExternalApiResult(ActionResult.SUCCESS_CONTINUE);
 		}
 	};
