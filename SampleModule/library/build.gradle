@@ -18,8 +18,7 @@ android {
 }
 
 repositories {
-    maven { url "file:///${System.env.GENEXUS_HOME}/Android/MavenRepositories/genexusRepository" }
-    maven { url "file:///${System.env.GENEXUS_HOME}/Android/MavenRepositories/thirdpartiesRepository" }
+    maven { url "file:///${System.env.GENEXUS_HOME}/Android/m2Repository" }
 }
 
 dependencies {

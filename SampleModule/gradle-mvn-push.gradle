@@ -6,7 +6,7 @@ project.group = 'com.example'
 uploadArchives {
     repositories {
         mavenDeployer {
-            repository(url: "file:///${System.env.GENEXUS_HOME}/Android/MavenRepositories/thirdpartiesRepository")
+            repository(url: "file:///${System.env.GENEXUS_HOME}/Android/m2Repository")
         }
     }
 
