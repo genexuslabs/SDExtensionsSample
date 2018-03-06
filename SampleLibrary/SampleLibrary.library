@@ -9,4 +9,9 @@
 		<Version>1.0</Version>
 		<ModuleClass>com.example.samplemodule.SampleModule</ModuleClass>
 	</Android>
+	<iOS>
+		<ModuleClass>SampleExtensionLibrary</ModuleClass>
+		<XCProjExtensionFile>Sample.XCExtensionTemplate.xml</XCProjExtensionFile>
+		<CopyListFile>Sample.CopyListTemplate.xml</CopyListFile>
+	</iOS>
 </ExtensionLibrary>

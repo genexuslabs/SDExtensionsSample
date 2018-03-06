@@ -3,7 +3,7 @@
 	<!-- Basic information -->
 	<Id>44bda26b-9309-45fd-8972-0b35b080aff9</Id>
 	<ObjClass>BASICUSERCONTROL</ObjClass>
-	<Version>0.1.0</Version>
+	<Version>0.1.1</Version>
 	<Name>BasicUserControl</Name>
 	<Description>Basic User Control</Description>
 	<IncludeInControlInfo>false</IncludeInControlInfo>
@@ -43,4 +43,5 @@
 	<Platforms>
 		<Platform>SmartDevices</Platform>
 	</Platforms>
+	<iOS_ClassName>BasicUserControl</iOS_ClassName>
 </ControlDefinition>
