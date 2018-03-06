@@ -1,4 +1,4 @@
-# Extensions Sample for Smart Devices
+# Smart Devices Extension Sample
 This sample contains:
 - A `User Control` definition.
 - An `External Object` definition.
@@ -12,9 +12,11 @@ This sample contains:
 - JDK and Android SDK for Android generator
 - MAC machine for iOS generator
 
-For more details see [Android Requirements for Genexus 15](http://wiki.genexus.com/commwiki/servlet/wiki?14449).
+For more details see:
+- [Android Requirements for Genexus 15](http://wiki.genexus.com/commwiki/servlet/wiki?14449).
+- [iOS Requirements for Genexus 15](https://wiki.genexus.com/commwiki/servlet/wiki?19478).
 
-## Instructions for both environments
+## Instructions
 
 ### Import the User Control definition in Genexus
 - Set the following environment variable:
@@ -32,11 +34,10 @@ For more details see [Android Requirements for Genexus 15](http://wiki.genexus.c
 ### Import the sample app (optional).
 To try out the _BasicUserControl_ and _BasicExternalObject_ samples you may wish to import the sample app from `SampleApp\BasicSample.xpz`.
 
-## Android specific instructions
+## Android specific
 
 ### Deploy the Genexus Android Module to Genexus
-- Set the following environment variables:
-    - `GENEXUS_HOME` to your Genexus installation directory.
+- Set the following environment variable:
     - `ANDROID_HOME` to your Android SDK directory.
 - Run the command `gradlew uploadArchives` from the `SampleModule` directory.
 
