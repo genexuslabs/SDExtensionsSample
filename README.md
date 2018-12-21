@@ -20,8 +20,8 @@ For more details see:
 
 ### Import the User Control definition in Genexus
 - Set the following environment variable:
-    - `GENEXUS_HOME` to your Genexus installation directory.
-- Copy the `BasicUserControl` directory to `%GENEXUS_HOME%\UserControls`.
+    - `GENEXUS_REPO` to Genexus Android Maven repository located in `Android\m2repository` inside your Genexus installation.
+- Copy the `BasicUserControl` directory to the `UserControls` directory in your Genexus installation.
 - Run `genexus.exe /install`.
 
 ### Import the External Object definition in Genexus
@@ -29,7 +29,7 @@ For more details see:
 - Import the _BasicExternalObject_ definition from `BasicExternalObject\BasicExternalObject.xpz`.
 
 ### Import the Genexus Library definition to Genexus
-- Copy the `SampleLibrary` directory to `%GENEXUS_HOME%\Libraries`.
+- Copy the `SampleLibrary` directory to the `Libraries` directory in your Genexus installation.
 
 ### Import the sample app (optional).
 To try out the _BasicUserControl_ and _BasicExternalObject_ samples you may wish to import the sample app from `SampleApp\BasicSample.xpz`.
