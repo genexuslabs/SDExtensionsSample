@@ -17,7 +17,7 @@ android {
 }
 
 repositories {
-    maven { url "file:///${System.env.GENEXUS_REPO}" }
+    maven { url "${System.env.GENEXUS_REPO}" }
     google()
     jcenter()
 }
