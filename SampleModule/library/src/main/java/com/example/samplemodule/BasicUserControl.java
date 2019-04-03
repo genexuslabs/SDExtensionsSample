@@ -11,6 +11,7 @@ import android.view.View;
 import com.artech.base.controls.IGxControlRuntime;
 import com.artech.base.metadata.ActionDefinition;
 import com.artech.base.metadata.ActionParameter;
+import com.artech.base.metadata.expressions.Expression;
 import com.artech.base.metadata.layout.LayoutItemDefinition;
 import com.artech.controls.IGxEdit;
 import com.artech.ui.Coordinator;
@@ -75,21 +76,22 @@ public class BasicUserControl extends AppCompatTextView implements IGxEdit,
 	}
 
 	@Override
-	public void setProperty(String name, Object value) {
+	public void setPropertyValue(String name, Expression.Value value) {
 
 	}
 
 	@Override
-	public Object getProperty(String name) {
+	public Expression.Value getPropertyValue(String name) {
 		return null;
 	}
 
 	@Override
-	public void runMethod(String method, List<Object> parameters) {
+	public Expression.Value callMethod(String method, List<Expression.Value> parameters) {
 		if (METHOD_SET_NAME.equals(method)) {
-			String name = (String) parameters.get(0);
+			String name = parameters.get(0).coerceToString();
 			setName(name);
 		}
+		return null;
 	}
 
 	public void setName(String name) {
