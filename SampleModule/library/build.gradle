@@ -24,7 +24,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.genexus:FlexibleClient:17.0-SNAPSHOT'
+    implementation 'com.genexus:FlexibleClient:16.3'
 }
 
 apply from: rootProject.file('gradle-mvn-push.gradle')
