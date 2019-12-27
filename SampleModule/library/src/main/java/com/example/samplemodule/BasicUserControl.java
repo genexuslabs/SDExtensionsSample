@@ -5,8 +5,9 @@ import java.util.List;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
+
+import androidx.appcompat.widget.AppCompatTextView;
 
 import com.artech.base.controls.IGxControlRuntime;
 import com.artech.base.metadata.ActionDefinition;
@@ -36,22 +37,22 @@ public class BasicUserControl extends AppCompatTextView implements IGxEdit,
 	}
 
 	@Override
-	public String getGx_Value() {
+	public String getGxValue() {
 		return mName;
 	}
 
 	@Override
-	public void setGx_Value(String value) {
+	public void setGxValue(String value) {
 		setName(value);
 	}
 
 	@Override
-	public String getGx_Tag() {
+	public String getGxTag() {
 		return getTag().toString();
 	}
 
 	@Override
-	public void setGx_Tag(String tag) {
+	public void setGxTag(String tag) {
 		setTag(tag);
 	}
 
@@ -76,18 +77,8 @@ public class BasicUserControl extends AppCompatTextView implements IGxEdit,
 	}
 
 	@Override
-	public void setPropertyValue(String name, Expression.Value value) {
-
-	}
-
-	@Override
-	public Expression.Value getPropertyValue(String name) {
-		return null;
-	}
-
-	@Override
-	public Expression.Value callMethod(String method, List<Expression.Value> parameters) {
-		if (METHOD_SET_NAME.equals(method)) {
+	public Expression.Value callMethod(String methodName, List<Expression.Value> parameters) {
+		if (METHOD_SET_NAME.equals(methodName)) {
 			String name = parameters.get(0).coerceToString();
 			setName(name);
 		}
