@@ -25,7 +25,7 @@ public class BasicExternalObject extends ExternalApi {
 		@Override
 		public @NonNull ExternalApiResult invoke(List<Object> parameters) {
 			Services.Messages.showMessage(getContext().getString(com.example.genexusmodule.R.string.hello_message));
-			return new ExternalApiResult(ActionResult.SUCCESS_CONTINUE);
+			return ExternalApiResult.SUCCESS_CONTINUE;
 		}
 	};
 
@@ -34,7 +34,7 @@ public class BasicExternalObject extends ExternalApi {
 		public @NonNull ExternalApiResult invoke(List<Object> parameters) {
 			final String text = (String) parameters.get(0);
 			Services.Messages.showMessage(text);
-			return new ExternalApiResult(ActionResult.SUCCESS_CONTINUE);
+			return ExternalApiResult.SUCCESS_CONTINUE;
 		}
 	};
 }
