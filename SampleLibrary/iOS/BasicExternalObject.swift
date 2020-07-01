@@ -15,12 +15,17 @@ public class BasicExternalObject: GXActionExternalObjectHandler {
 
 	//MARK: - External object methods: Message and Hello
 
-	@objc public func gxActionExObjMethodHandler_Message() {
-		guard let message = self.readParameter() else {
-			let error = NSError.wrongNumberOfParametersDeveloperError(forMethod: self.actionExObjDesc.actionExternalObjectMethod)
+	@objc public func gxActionExObjMethodHandler_Message(_ parameters: [Any]) {
+		if let error = self.validateNumber(ofParametersReceived: UInt(parameters.count), expected: 1) {
 			self.onFinishedExecutingWithError(error)
 			return
 		}
+		
+		guard let message = self.stringParameter(self.actionDescParametersArray![0], fromValue: parameters[0]) else {
+			self.onFinishedExecutingWithDefaultError()
+			return
+		}
+		
 		self.showToast(message: message)
 		self.onFinishedExecutingWithSuccess()
     }
@@ -31,17 +36,6 @@ public class BasicExternalObject: GXActionExternalObjectHandler {
 		self.onFinishedExecutingWithSuccess()
 	}
 
-	//MARK: - Private
-	
-	private func readParameter() -> String? {
-		guard let actionParameterArray = self.actionExObjDesc.actionParametersDescriptor??.actionParametersDescriptors,
-			actionParameterArray.count == 1 else {
-			return nil
-		}
-		let paramValue = self.readStringParameter(actionParameterArray[0], from: self.contextEntityData())
-		return GXUtilities.nonEmptyString(from: paramValue)
-	}
-	
 	//MARK: - Internal implementation
 
 	private func showToast(message : String) {

@@ -8,8 +8,8 @@ public class BasicUserControl: GXControlBaseWithLayout {
 
 	public static let classIdentifier = "BasicUserControl"
 
-	private var _label: UILabel!
-	private var _tapCount: Int = 0
+	private var label: UILabel!
+	private var tapCount: Int = 0
 
 	struct Constants {
 		// Methods
@@ -24,21 +24,22 @@ public class BasicUserControl: GXControlBaseWithLayout {
 	
 	override public func loadContentViews(withContentFrame contentFrame: CGRect, intoContainerView containerView: UIView) {
 		// Create a Label
-		_label = UILabel(frame: contentFrame)
-		_label.textAlignment = .center
-		_label.text = Constants.HELLO_MESSAGE
-
+		label = UILabel(frame: contentFrame)
+		label.textAlignment = .center
+		label.text = Constants.HELLO_MESSAGE
+		label.textColor = UIColor.black
+		
 		// Recognize the tap event
 		let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.tapResponse(recognizer:)))
 		tapGesture.numberOfTapsRequired = 1
-		_label.addGestureRecognizer(tapGesture)
-		_label.isUserInteractionEnabled = true
+		label.addGestureRecognizer(tapGesture)
+		label.isUserInteractionEnabled = true
 
-		containerView.addSubview(_label)
+		containerView.addSubview(label)
 	}
 
 	override public func layoutContentViews(withContentFrame contentFrame: CGRect) {
-		_label.frame = contentFrame
+		label.frame = contentFrame
 	}
 
 	override public func hasAction(forControlEvent eventName: String) -> Bool {
@@ -46,33 +47,34 @@ public class BasicUserControl: GXControlBaseWithLayout {
 			|| (eventName == Constants.METHOD_SET_ONTAP)
 			|| super.hasAction(forControlEvent: eventName)
 	}
-
-	override public func executeMethod(_ methodName: String, withParameters parameters: [Any]) {
+	
+	override public func executeMethod(_ methodName: String, withParameters parameters: [Any]) -> Any? {
 		switch methodName {
 		case Constants.METHOD_SET_NAME:
 			if (parameters.count == 1) {
 				if let firstParameter = GXUtilities.string(from: parameters[0]) {
-					self.setName(firstParameter)
+					setName(firstParameter)
 				}
 			}
+			return nil
 		// If it responds to other methods, add here
 		default:
-			super.executeMethod(methodName, withParameters: parameters)
+			return super.executeMethod(methodName, withParameters: parameters)
 		}
 	}
-
+	
 	// MARK: - Internal
 
 	private func setName(_ name: String) {
-		_label.text = String(format: Constants.WELCOME_MESSAGE, name)
+		label.text = String(format: Constants.WELCOME_MESSAGE, name)
 	}
 
 	@objc func tapResponse(recognizer: UITapGestureRecognizer) {
 		// Update local variable
-		_tapCount += 1
+		tapCount += 1
 		
 		// Dispatch the User control OnTap event
-		let parms = [ NSNumber(value: _tapCount) ]
+		let parms = [ NSNumber(value: tapCount) ]
 		self.fireControlEvent(Constants.METHOD_SET_ONTAP, userInterfaceContext: nil, withEntityData: nil, parameters: parms)
 	}
 }
