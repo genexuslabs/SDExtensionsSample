@@ -2,9 +2,8 @@ package com.example.samplemodule;
 
 import java.util.List;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
-import com.artech.actions.ActionResult;
 import com.artech.actions.ApiAction;
 import com.artech.base.services.Services;
 import com.artech.externalapi.ExternalApi;
