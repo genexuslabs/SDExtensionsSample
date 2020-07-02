@@ -42,7 +42,7 @@ To try out the _BasicUserControl_ and _BasicExternalObject_ samples you may wish
 - Run the command `gradlew uploadArchives` from the `SampleModule` directory.
 
 ### Considerations
-- Take into account that this project uses the latest `FlexibleClient` version installed at `GENEXUS_REPO`. If you need to work with an specific one, you will have to replace it in [library/build.gradle](https://github.com/genexuslabs/SDExtensionsSample/blob/master/SampleModule/library/build.gradle) file.
+- Take into account that this project uses the latest `FlexibleClient` version installed at `GENEXUS_REPO`. If you need to work with a specific one, you will have to replace it in [library/build.gradle](https://github.com/genexuslabs/SDExtensionsSample/blob/master/SampleModule/library/build.gradle) file.
 
 ## Further reading
 
