@@ -23,7 +23,7 @@ For more details see:
 
 ### Import the User Control definition in GeneXus
 - Set the following environment variable:
-    - `GENEXUS_REPO` to GeneXus Android Maven repository located in `Android\m2repository` inside your GeneXus installation (e.g. file:///C/path/to/GX/Android/m2Repository).
+    - `GENEXUS_REPO` to GeneXus Android Maven repository located in `Android\m2repository` inside your GeneXus installation (e.g. file:///C:/path/to/GX/Android/m2Repository).
 - Copy the `BasicUserControl` directory to the `UserControls` directory in your GeneXus installation.
 - Run `genexus.exe /install`.
 
