@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion ANDROID_COMPILE_SDK_VERSION
@@ -17,14 +18,17 @@ android {
 }
 
 repositories {
-    maven { url "${System.env.GENEXUS_REPO}" }
     google()
     jcenter()
+    mavenCentral()
     maven { url "https://jitpack.io" }
+    maven { url "${System.env.GENEXUS_REPO}" }
 }
 
 dependencies {
+    //noinspection GradleDynamicVersion
     implementation 'com.genexus:FlexibleClient:+'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
 apply from: rootProject.file('gradle-mvn-push.gradle')
