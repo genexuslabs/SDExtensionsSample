@@ -9,11 +9,11 @@ import com.example.genexusmodule.R
 
 class BasicExternalObject(action: ApiAction) : ExternalApi(action) {
 
-	private val mMethodHello = IMethodInvoker {
+	private val methodHello = IMethodInvoker {
 		Services.Messages.showMessage(context.getString(R.string.hello_message))
 		ExternalApiResult.SUCCESS_CONTINUE
 	}
-	private val mMethodMessage = IMethodInvoker { parameters ->
+	private val methodMessage = IMethodInvoker { parameters ->
 		val text = parameters[0] as String
 		Services.Messages.showMessage(text)
 		ExternalApiResult.SUCCESS_CONTINUE
@@ -26,7 +26,7 @@ class BasicExternalObject(action: ApiAction) : ExternalApi(action) {
 	}
 
 	init {
-		addMethodHandler(METHOD_HELLO, 0, mMethodHello)
-		addMethodHandler(METHOD_MESSAGE, 1, mMethodMessage)
+		addMethodHandler(METHOD_HELLO, 0, methodHello)
+		addMethodHandler(METHOD_MESSAGE, 1, methodMessage)
 	}
 }

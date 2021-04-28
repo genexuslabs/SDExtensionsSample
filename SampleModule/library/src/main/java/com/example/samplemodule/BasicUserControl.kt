@@ -14,11 +14,11 @@ import com.example.genexusmodule.R
 @Suppress("ViewConstructor", "UNUSED_PARAMETER")
 class BasicUserControl(
 		context: Context,
-		private val mCoordinator: Coordinator,
+		private val coordinator: Coordinator,
 		definition: LayoutItemDefinition?
 ) : AppCompatTextView(context), IGxEdit, IGxControlRuntime {
 
-	private var mName: String? = null
+	private var name: String? = null
 	private var tapCount = 0
 
 	override fun callMethod(methodName: String, parameters: List<Expression.Value>): Expression.Value? {
@@ -30,29 +30,29 @@ class BasicUserControl(
 		return null
 	}
 
-	private val mOnClickListener = OnClickListener {
+	private val onClickListener = OnClickListener {
 		tapCount++
 		runOnTapEvent()
 	}
 
 	private fun runOnTapEvent() {
-		val actionDef = mCoordinator.getControlEventHandler(this, EVENT_ON_TAP)
+		val actionDef = coordinator.getControlEventHandler(this, EVENT_ON_TAP)
 
 		for (param in actionDef.eventParameters) {
 			val paramName = param.valueDefinition.name
-			mCoordinator.setValue(paramName, tapCount)
+			coordinator.setValue(paramName, tapCount)
 		}
 
-		mCoordinator.runControlEvent(this, EVENT_ON_TAP)
+		coordinator.runControlEvent(this, EVENT_ON_TAP)
 	}
 
 	private fun setName(name: String?) {
-		mName = name
+		this.name = name
 		text = context.getString(R.string.welcome_message, name)
 	}
 
 	override fun getGxValue(): String? {
-		return mName
+		return name
 	}
 
 	override fun setGxValue(value: String) {
@@ -88,6 +88,6 @@ class BasicUserControl(
 	}
 
 	init {
-		setOnClickListener(mOnClickListener)
+		setOnClickListener(onClickListener)
 	}
 }
