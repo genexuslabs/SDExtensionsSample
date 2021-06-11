@@ -3,6 +3,9 @@ import Foundation
 import GXCoreBL
 import GXCoreUI
 import GXDataLayer
+import GXStandardClasses
+
+// MARK: - To be called from a User Event
 
 @objc(BasicExternalObject)
 public class BasicExternalObject: GXActionExternalObjectHandler {
@@ -26,19 +29,47 @@ public class BasicExternalObject: GXActionExternalObjectHandler {
 			return
 		}
 		
-		self.showToast(message: message)
+		ToastMessage.showToast(message: message)
 		self.onFinishedExecutingWithSuccess()
     }
 
 	@objc public func gxActionExObjMethodHandler_Hello() {
 		let hello = "Hello World!"
-		self.showToast(message: hello)
+		ToastMessage.showToast(message: hello)
 		self.onFinishedExecutingWithSuccess()
 	}
+	
+}
 
-	//MARK: - Internal implementation
+// MARK: - Offline support
 
-	private func showToast(message : String) {
+@objc(BasicExternalObjectOffline)
+public class BasicExternalObjectOffline: GXExternalObjectBase {
+	
+	// MARK: Overrides
+	
+	override public var externalObjectName: String {
+		return "BasicExternalObject"
+	}
+	
+	// MARK: External object methods
+	
+	@objc(hello)
+	public class func hello() {
+		ToastMessage.showToast(message: "Hello World!")
+	}
+	
+	@objc(message:)
+	public class func message(_ text: String) {
+		ToastMessage.showToast(message: text)
+	}
+	
+}
+
+// MARK: - Toast implementation
+
+fileprivate class ToastMessage {
+	static func showToast(message : String) {
 		// Ideas from https://stackoverflow.com/questions/31540375/how-to-toast-message-in-swift
 		// First get the controller and it's view
 		if let rootController = GXExecutionEnvironmentHelper.keyWindow?.rootViewController {
