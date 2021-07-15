@@ -22,8 +22,6 @@ For more details see:
 - Copy the `SampleLibrary` directory to the `Libraries` directory in your GeneXus installation.
 
 ### Import the User Control definition in GeneXus
-- Set the following environment variable:
-    - `GENEXUS_REPO` to GeneXus Android Maven repository located in `Android\m2repository` inside your GeneXus installation (e.g. file:///C:/path/to/GX/Android/m2Repository).
 - Copy the `BasicUserControl` directory to the `UserControls` directory in your GeneXus installation.
 - Run `genexus.exe /install`.
 
@@ -37,7 +35,8 @@ To try out the _BasicUserControl_ and _BasicExternalObject_ samples you may wish
 ## Android specific
 
 ### Deploy the GeneXus Android Module to GeneXus
-- Set the following environment variable:
+- Set the following environment variables:
+    - `GENEXUS_REPO` to GeneXus Android Maven repository located in `Android\m2repository` inside your GeneXus installation (e.g. file:///C:/path/to/GX/Android/m2Repository).
     - `ANDROID_HOME` to your Android SDK directory.
 - Run the command `gradlew uploadArchives` from the `SampleModule` directory.
 
