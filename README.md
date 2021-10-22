@@ -1,4 +1,4 @@
-# Smart Devices Extension Sample
+# Native Mobile Extension Sample
 This sample contains:
 - A `User Control` definition.
 - An `External Object` definition.
