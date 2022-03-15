@@ -4,11 +4,11 @@ import android.content.Context
 import android.content.Intent
 import android.view.View.OnClickListener
 import androidx.appcompat.widget.AppCompatTextView
-import com.artech.base.controls.IGxControlRuntime
-import com.artech.base.metadata.expressions.Expression
-import com.artech.base.metadata.layout.LayoutItemDefinition
-import com.artech.controls.IGxEdit
-import com.artech.ui.Coordinator
+import com.genexus.android.core.base.controls.IGxControlRuntime
+import com.genexus.android.core.base.metadata.expressions.Expression
+import com.genexus.android.core.base.metadata.layout.LayoutItemDefinition
+import com.genexus.android.core.controls.IGxEdit
+import com.genexus.android.core.ui.Coordinator
 import com.example.genexusmodule.R
 
 @Suppress("ViewConstructor", "UNUSED_PARAMETER")

@@ -1,10 +1,9 @@
 package com.example.samplemodule
 
-import com.artech.actions.ApiAction
-import com.artech.base.services.Services
-import com.artech.externalapi.ExternalApi
-import com.artech.externalapi.ExternalApi.IMethodInvoker
-import com.artech.externalapi.ExternalApiResult
+import com.genexus.android.core.actions.ApiAction
+import com.genexus.android.core.base.services.Services
+import com.genexus.android.core.externalapi.ExternalApi
+import com.genexus.android.core.externalapi.ExternalApiResult
 import com.example.genexusmodule.R
 
 class BasicExternalObject(action: ApiAction) : ExternalApi(action) {

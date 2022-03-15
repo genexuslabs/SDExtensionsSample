@@ -1,11 +1,11 @@
 package com.example.samplemodule
 
 import android.content.Context
-import com.artech.externalapi.ExternalApiDefinition
-import com.artech.externalapi.ExternalApiFactory
-import com.artech.framework.GenexusModule
-import com.artech.usercontrols.UcFactory
-import com.artech.usercontrols.UserControlDefinition
+import com.genexus.android.core.externalapi.ExternalApiDefinition
+import com.genexus.android.core.externalapi.ExternalApiFactory
+import com.genexus.android.core.framework.GenexusModule
+import com.genexus.android.core.usercontrols.UcFactory
+import com.genexus.android.core.usercontrols.UserControlDefinition
 
 class SampleModule : GenexusModule {
 	override fun initialize(context: Context) {

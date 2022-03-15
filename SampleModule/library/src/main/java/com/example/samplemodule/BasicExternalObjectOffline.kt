@@ -1,6 +1,6 @@
 package com.example.samplemodule
 
-import com.artech.base.services.Services
+import com.genexus.android.core.base.services.Services
 
 class BasicExternalObjectOffline {
 	companion object {
