@@ -8,13 +8,13 @@ This sample contains:
 - An app that lets you try out both extensions.
 
 ## Requirements
-- GeneXus 16 (latest upgrade is recommended)
+- GeneXus (latest upgrade is recommended)
 - JDK and Android SDK for Android generator
 - MAC machine for iOS generator
 
 For more details see:
-- [Android Requirements for GeneXus 16](http://wiki.genexus.com/commwiki/servlet/wiki?14449).
-- [iOS Requirements for GeneXus 16](https://wiki.genexus.com/commwiki/servlet/wiki?19478).
+- [Android Requirements for GeneXus](http://wiki.genexus.com/commwiki/servlet/wiki?14449).
+- [iOS Requirements for GeneXus](https://wiki.genexus.com/commwiki/servlet/wiki?19478).
 
 ## Instructions
 
