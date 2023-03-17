@@ -27,7 +27,7 @@ public class BasicUserControl: GXControlBaseWithLayout {
 		label = UILabel(frame: contentFrame)
 		label.textAlignment = .center
 		label.text = Constants.HELLO_MESSAGE
-		label.textColor = UIColor.black
+		label.textColor = #colorLiteral(red: 0.203922, green: 0.2, blue: 0.305882, alpha: 1)
 		
 		// Recognize the tap event
 		let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.tapResponse(recognizer:)))
