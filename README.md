@@ -34,7 +34,7 @@ To try out the _BasicUserControl_ and _BasicExternalObject_ samples you may wish
 
 ## Android specific
 
-### Deploy the GeneXus Android Module to GeneXus
+### Build and Deploy the GeneXus Android Module to GeneXus
 - Set the following environment variables:
     - `GENEXUS_REPO` to GeneXus Android Maven repository located in `Android\m2repository` inside your GeneXus installation (e.g. file:///C:/path/to/GX/Android/m2Repository). Check that the environment variables use the format with "file:///" at the beginning.
     - `ANDROID_HOME` to your Android SDK directory.
