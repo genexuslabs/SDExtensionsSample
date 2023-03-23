@@ -3,18 +3,15 @@ import Foundation
 import GXCoreBL
 import GXDataLayer
 
-@objc(BasicUserControl)
 public class BasicUserControl: GXControlBaseWithLayout {
 
-	public static let classIdentifier = "BasicUserControl"
-
-	private var label: UILabel!
+	private var label: UILabel? = nil
 	private var tapCount: Int = 0
 
 	struct Constants {
 		// Methods
 		static let METHOD_SET_NAME  = "setname"
-		static let METHOD_SET_ONTAP = "ontap"
+		static let EVENT_ONTAP = "ontap"
 		// Sample labels
 		static let HELLO_MESSAGE = "Hello!"
 		static let WELCOME_MESSAGE = "Hello %@!"
@@ -24,49 +21,75 @@ public class BasicUserControl: GXControlBaseWithLayout {
 	
 	override public func loadContentViews(withContentFrame contentFrame: CGRect, intoContainerView containerView: UIView) {
 		// Create a Label
-		label = UILabel(frame: contentFrame)
+		let label = UILabel(frame: contentFrame)
+		self.label = label
 		label.textAlignment = .center
-		label.text = Constants.HELLO_MESSAGE
-		label.textColor = #colorLiteral(red: 0.203922, green: 0.2, blue: 0.305882, alpha: 1)
+		label.text = currentLabelText
+		label.textColor = .gxLabel
 		
 		// Recognize the tap event
-		let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.tapResponse(recognizer:)))
+		let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(Self.tapResponse(recognizer:)))
 		tapGesture.numberOfTapsRequired = 1
 		label.addGestureRecognizer(tapGesture)
 		label.isUserInteractionEnabled = true
 
 		containerView.addSubview(label)
 	}
-
-	override public func layoutContentViews(withContentFrame contentFrame: CGRect) {
-		label.frame = contentFrame
+	
+	public override func unloadView() {
+		super.unloadView()
+		label = nil
 	}
 
-	override public func hasAction(forControlEvent eventName: String) -> Bool {
-		return (eventName == Constants.METHOD_SET_NAME)
-			|| (eventName == Constants.METHOD_SET_ONTAP)
-			|| super.hasAction(forControlEvent: eventName)
+	override public func layoutContentViews(withContentFrame contentFrame: CGRect) {
+		label?.frame = contentFrame
 	}
 	
 	override public func executeMethod(_ methodName: String, withParameters parameters: [Any]) -> Any? {
 		switch methodName {
 		case Constants.METHOD_SET_NAME:
-			if (parameters.count == 1) {
-				if let firstParameter = GXUtilities.string(from: parameters[0]) {
-					setName(firstParameter)
-				}
+			guard parameters.count == 1 else {
+				GXFoundationServices.loggerService()?.logMessage("Method \(methodName) expects 1 parameter",
+																 for: .general,
+																 with: .error,
+																 logToConsole: true)
+				return nil
 			}
+			guard let firstParameter = GXUtilities.string(from: parameters[0]) else {
+				GXFoundationServices.loggerService()?.logMessage("Method \(methodName) expects first parameter to be a String",
+																 for: .general,
+																 with: .error,
+																 logToConsole: true)
+				return nil
+			}
+			setName(firstParameter)
 			return nil
-		// If it responds to other methods, add here
+			// If it responds to other methods, add here
 		default:
 			return super.executeMethod(methodName, withParameters: parameters)
 		}
 	}
 	
 	// MARK: - Internal
+	
+	private var name: String? = nil {
+		didSet {
+			label?.text = currentLabelText
+		}
+	}
+	
+	private var currentLabelText: String {
+		if let name = name {
+			return String(format: Constants.WELCOME_MESSAGE, name)
+		}
+		else {
+			return Constants.HELLO_MESSAGE
+		}
+	}
 
 	private func setName(_ name: String) {
-		label.text = String(format: Constants.WELCOME_MESSAGE, name)
+		self.name = name
+		label?.text = String(format: Constants.WELCOME_MESSAGE, name)
 	}
 
 	@objc func tapResponse(recognizer: UITapGestureRecognizer) {
@@ -75,6 +98,6 @@ public class BasicUserControl: GXControlBaseWithLayout {
 		
 		// Dispatch the User control OnTap event
 		let parms = [ NSNumber(value: tapCount) ]
-		self.fireControlEvent(Constants.METHOD_SET_ONTAP, userInterfaceContext: nil, withEntityData: nil, parameters: parms)
+		self.fireControlEvent(Constants.EVENT_ONTAP, userInterfaceContext: nil, withEntityData: nil, parameters: parms)
 	}
 }

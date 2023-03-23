@@ -17,12 +17,23 @@ $if(Main.AppleDevice_iOS)$
 		8C7063CF2046EC20008114AC /* SampleExtensionLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SampleExtensionLibrary.swift; path = ExtensionLibraries/SampleLibrary/SampleExtensionLibrary.swift; sourceTree = "<group>"; };
 				]]>
 			</PBXFileReference>
-			<PBXGroup_CustomTemplate>
-				<![CDATA[		
+			<PBXGroup>
+				<![CDATA[
+		AEBD699329CC825400378259 /* Sample Extension Library */,
 				]]>
-			</PBXGroup_CustomTemplate>
+			</PBXGroup>
 			<PBXGroupRoot>
-				<![CDATA[		
+				<![CDATA[	
+		AEBD699329CC825400378259 /* Sample Extension Library */ = {
+			isa = PBXGroup;
+			children = (
+				8C7063CF2046EC20008114AC /* SampleExtensionLibrary.swift */,
+				8C7063CD2046EC1E008114AC /* BasicUserControl.swift */,
+				8C7063CE2046EC1F008114AC /* BasicExternalObject.swift */,
+			);
+			name = "Sample Extension Library";
+			sourceTree = "<group>";
+		};	
 				]]>
 			</PBXGroupRoot>
 			<PBXSourcesBuildPhase>
@@ -32,10 +43,6 @@ $if(Main.AppleDevice_iOS)$
 				8C7063D12046EC20008114AC /* BasicExternalObject.swift in Sources */,
 				]]>
 			</PBXSourcesBuildPhase>
-			<PBXResourcesBuildPhase>
-				<![CDATA[		
-			]]>
-			</PBXResourcesBuildPhase>
 $endif$
 		</Extends>
 	</ProjectSections>
