@@ -36,9 +36,9 @@ To try out the _BasicUserControl_ and _BasicExternalObject_ samples you may wish
 
 ### Build and Deploy the GeneXus Android Module to GeneXus
 - Set the following system environment variables:
-    - `GENEXUS_REPO` to GeneXus Android Maven repository located in `Android\m2repository` inside your GeneXus installation (e.g. file:///C:/path/to/GX/Android/m2Repository). Check that the environment variables use the format with "file:///" at the beginning.
+    - `GENEXUS_REPO` to GeneXus Android Maven repository located in `Android\m2repository` inside your GeneXus installation (e.g. `file:///C:/path/to/GX/Android/m2Repository`, making sure it starts with the `file` scheme).
     - `ANDROID_HOME` to your Android SDK directory.
-- Run the command `gradlew uploadArchives` from the `SampleModule` directory.
+- Run the command `gradlew publishDebugPublicationToInternalRepository` from the `SampleModule` directory.
 
 ### Considerations
 - Take into account that this project uses the latest `FlexibleClient` version installed at `GENEXUS_REPO`. If you need to work with a specific one, you will have to replace it in [library/build.gradle](https://github.com/genexuslabs/SDExtensionsSample/blob/master/SampleModule/library/build.gradle) file.

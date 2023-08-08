@@ -3,6 +3,7 @@ apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion ANDROID_COMPILE_SDK_VERSION
+    namespace "com.example.genexusmodule"
 
     defaultConfig {
         minSdkVersion ANDROID_MIN_SDK_VERSION
@@ -19,7 +20,6 @@ android {
 
 repositories {
     google()
-    jcenter()
     mavenCentral()
     maven { url "https://jitpack.io" }
     maven { url "${System.env.GENEXUS_REPO}" }
