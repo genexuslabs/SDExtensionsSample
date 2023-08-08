@@ -1,21 +1,27 @@
-apply plugin: 'maven'
+apply plugin: 'maven-publish'
 
 project.version = '1.0'
 project.group = 'com.example'
 
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            repository(url: "${System.env.GENEXUS_REPO}")
+android {
+    publishing {
+        singleVariant("debug") { }
+    }
+}
+
+afterEvaluate {
+    publishing {
+        repositories {
+            maven {
+                name "Internal"
+                url = "${System.env.GENEXUS_REPO}"
+            }
         }
-    }
 
-    task androidSourcesJar(type: Jar) {
-        classifier = 'sources'
-        from android.sourceSets.main.java.sourceFiles
-    }
-
-    artifacts {
-        archives androidSourcesJar
+        publications {
+            debug(MavenPublication) {
+                from components.debug
+            }
+        }
     }
 }
