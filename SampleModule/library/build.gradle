@@ -23,6 +23,7 @@ repositories {
     mavenCentral()
     maven { url "https://jitpack.io" }
     maven { url "${System.env.GENEXUS_REPO}" }
+    maven { url "${System.env.STD_CLASSES_REPO}" }
 }
 
 dependencies {
