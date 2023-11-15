@@ -22,7 +22,7 @@ repositories {
     google()
     mavenCentral()
     maven { url "https://jitpack.io" }
-    maven { url "${System.env.GENEXUS_REPO}" }
+    maven { url "file:///${System.env.GENEXUS_REPO}" }
     maven { url "${System.env.STD_CLASSES_REPO}" }
 }
 
@@ -31,6 +31,8 @@ dependencies {
     implementation 'com.genexus.android:FlexibleClient:+'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 }
 
 apply from: rootProject.file('gradle-mvn-push.gradle')
