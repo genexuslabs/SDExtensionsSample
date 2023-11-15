@@ -30,13 +30,20 @@ class BasicExternalObject(action: ApiAction) : ExternalApi(action) {
 		}
 
 		override fun handleActivityResult(requestCode: Int, resultCode: Int, result: Intent?): ExternalApiResult {
-			if (requestCode != METHOD_ACTIVITY_REQUEST_CODE || resultCode != Activity.RESULT_OK) {
-				return ExternalApiResult.FAILURE
+			return if (requestCode == METHOD_ACTIVITY_REQUEST_CODE) {
+				when (resultCode) {
+					Activity.RESULT_OK -> {
+						val sumResult = result?.getIntExtra(ActivitySumSample.KEY_RESULT, -1)
+						ExternalApiResult.success(sumResult)
+					}
+
+					else -> {
+						ExternalApiResult.FAILURE
+					}
+				}
+			} else {
+				ExternalApiResult.FAILURE
 			}
-
-			val sumResult = result?.getIntExtra(ActivitySumSample.KEY_RESULT, -1)
-
-			return ExternalApiResult.success(sumResult)
 		}
 	}
 
@@ -44,14 +51,14 @@ class BasicExternalObject(action: ApiAction) : ExternalApi(action) {
 		const val NAME = "BasicExternalObject"
 		private const val METHOD_HELLO = "Hello"
 		private const val METHOD_MESSAGE = "Message"
-		private const val METHOD_ACTIVITY = "ActivityMethod"
+		private const val METHOD_UI_SUM = "UISum"
 
-		private const val METHOD_ACTIVITY_REQUEST_CODE = 4364;
+		private const val METHOD_ACTIVITY_REQUEST_CODE = 4364
 	}
 
 	init {
 		addMethodHandler(METHOD_HELLO, 0, methodHello)
 		addMethodHandler(METHOD_MESSAGE, 1, methodMessage)
-		addMethodHandler(METHOD_ACTIVITY, 2, methodActivity)
+		addMethodHandler(METHOD_UI_SUM, 2, methodActivity)
 	}
 }

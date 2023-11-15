@@ -3,6 +3,11 @@
 
     <application>
         <activity
+            android:name="com.example.samplemodule.ui.SumActivityComposable"
+            android:exported="false"
+            android:label="@string/title_activity_sum_composable"
+            android:theme="@style/Theme.SampleModule" />
+        <activity
             android:name="com.example.samplemodule.ActivitySumSample"
             android:exported="false" />
     </application>
