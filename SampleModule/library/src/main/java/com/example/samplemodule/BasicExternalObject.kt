@@ -33,7 +33,7 @@ class BasicExternalObject(action: ApiAction) : ExternalApi(action) {
 			return if (requestCode == METHOD_ACTIVITY_REQUEST_CODE) {
 				when (resultCode) {
 					Activity.RESULT_OK -> {
-						val sumResult = result?.getIntExtra(ActivitySumSample.KEY_RESULT, -1)
+						val sumResult = result?.getIntExtra(ActivityAddNumbers.KEY_RESULT, -1)
 						ExternalApiResult.success(sumResult)
 					}
 
@@ -51,7 +51,7 @@ class BasicExternalObject(action: ApiAction) : ExternalApi(action) {
 		const val NAME = "BasicExternalObject"
 		private const val METHOD_HELLO = "Hello"
 		private const val METHOD_MESSAGE = "Message"
-		private const val METHOD_UI_SUM = "UISum"
+		private const val METHOD_UI_ADD = "UIAdd"
 
 		private const val METHOD_ACTIVITY_REQUEST_CODE = 4364
 	}
@@ -59,6 +59,6 @@ class BasicExternalObject(action: ApiAction) : ExternalApi(action) {
 	init {
 		addMethodHandler(METHOD_HELLO, 0, methodHello)
 		addMethodHandler(METHOD_MESSAGE, 1, methodMessage)
-		addMethodHandler(METHOD_UI_SUM, 2, methodActivity)
+		addMethodHandler(METHOD_UI_ADD, 2, methodActivityAdd)
 	}
 }
