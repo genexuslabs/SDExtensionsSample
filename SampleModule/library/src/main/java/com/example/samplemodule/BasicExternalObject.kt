@@ -20,11 +20,13 @@ class BasicExternalObject(action: ApiAction) : ExternalApi(action) {
 		ExternalApiResult.SUCCESS_CONTINUE
 	}
 
-	private val methodActivity = object : IMethodInvokerWithActivityResult {
+	private val methodActivityAdd = object : IMethodInvokerWithActivityResult {
 		override fun invoke(parameters: MutableList<Any>?): ExternalApiResult {
-			val intent = Intent(context, ActivitySumSample::class.java)
-			intent.putExtra(ActivitySumSample.KEY_NUMBER_1, (parameters?.get(0).toString().toInt()))
-			intent.putExtra(ActivitySumSample.KEY_NUMBER_2, (parameters?.get(1).toString().toInt()))
+			val intent = Intent(context, ActivityAddNumbers::class.java)
+			val number1 = parameters?.get(0).toString().toInt()
+			val number2 = parameters?.get(1).toString().toInt()
+			intent.putExtra(ActivityAddNumbers.KEY_NUMBER_1, number1)
+			intent.putExtra(ActivityAddNumbers.KEY_NUMBER_2, number2)
 			startActivityForResult(intent, METHOD_ACTIVITY_REQUEST_CODE)
 			return ExternalApiResult.SUCCESS_WAIT
 		}
