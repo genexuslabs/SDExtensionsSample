@@ -14,7 +14,7 @@ afterEvaluate {
         repositories {
             maven {
                 name "Internal"
-                url = "file:///${System.env.GENEXUS_REPO}"
+                url = "${System.env.GENEXUS_REPO}"
             }
         }
 
