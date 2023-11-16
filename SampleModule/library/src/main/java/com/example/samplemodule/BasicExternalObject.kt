@@ -31,21 +31,15 @@ class BasicExternalObject(action: ApiAction) : ExternalApi(action) {
 			return ExternalApiResult.SUCCESS_WAIT
 		}
 
-		override fun handleActivityResult(requestCode: Int, resultCode: Int, result: Intent?): ExternalApiResult {
-			return if (requestCode == METHOD_ACTIVITY_REQUEST_CODE) {
-				when (resultCode) {
-					Activity.RESULT_OK -> {
-						val sumResult = result?.getIntExtra(ActivityAddNumbers.KEY_RESULT, -1)
-						ExternalApiResult.success(sumResult)
-					}
+		override fun handleActivityResult(requestCode: Int, resultCode: Int, result: Intent?) : ExternalApiResult {
+			if (requestCode != METHOD_ACTIVITY_REQUEST_CODE || resultCode != Activity.RESULT_OK)
+				return ExternalApiResult.FAILURE
 
-					else -> {
-						ExternalApiResult.FAILURE
-					}
-				}
-			} else {
+			val sumResult = result?.getIntExtra(ActivityAddNumbers.KEY_RESULT, -1)
+			return if (sumResult == null || sumResult == -1)
 				ExternalApiResult.FAILURE
-			}
+			else
+				ExternalApiResult.success(sumResult)
 		}
 	}
 
