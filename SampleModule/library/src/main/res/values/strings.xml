@@ -2,4 +2,7 @@
 <resources>
     <string name="hello_message">Hello World!</string>
     <string name="welcome_message">"Hello %1$s!"</string>
+    <string name="ui_sum_number_1_label">Number 1</string>
+    <string name="ui_sum_number_2_label">Number 2</string>
+    <string name="ui_sum_button_label">Sum</string>
 </resources>
