@@ -22,7 +22,7 @@ jobs:
         run: cd ./SampleModule
 
       - name: Changed access mode for gradle executable
-        run: chmod +x ./gradlew
+        run: chmod +x ./SampleModule/gradlew
 
       - name: Build Debug configuration
         uses: gradle/gradle-build-action@v2.1.3
