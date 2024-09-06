@@ -7,6 +7,7 @@ import com.genexus.android.core.base.services.Services
 import com.genexus.android.core.externalapi.ExternalApi
 import com.genexus.android.core.externalapi.ExternalApiResult
 import com.example.genexusmodule.R
+import com.genexus.android.core.actions.ExternalObjectEvent
 
 class BasicExternalObject(action: ApiAction) : ExternalApi(action) {
 
@@ -43,11 +44,22 @@ class BasicExternalObject(action: ApiAction) : ExternalApi(action) {
 		}
 	}
 
+	private val methodFireMessagePrintEvent = IMethodInvoker { parameters ->
+		val message = parameters[0].toString()
+		val event = ExternalObjectEvent(NAME, EVENT_NAME_ON_MESSAGE_PRINTED)
+		val params = listOf(message)
+		event.fire(params)
+		ExternalApiResult.SUCCESS_CONTINUE
+	}
+
 	companion object {
 		const val NAME = "BasicExternalObject"
 		private const val METHOD_HELLO = "Hello"
 		private const val METHOD_MESSAGE = "Message"
 		private const val METHOD_UI_ADD = "UIAdd"
+		private const val METHOD_PRINT_MESSAGE = "PrintMessage"
+
+		private const val EVENT_NAME_ON_MESSAGE_PRINTED = "OnMessagePrinted"
 
 		private const val METHOD_ACTIVITY_REQUEST_CODE = 4364
 	}
@@ -56,5 +68,6 @@ class BasicExternalObject(action: ApiAction) : ExternalApi(action) {
 		addMethodHandler(METHOD_HELLO, 0, methodHello)
 		addMethodHandler(METHOD_MESSAGE, 1, methodMessage)
 		addMethodHandler(METHOD_UI_ADD, 2, methodActivityAdd)
+		addMethodHandler(METHOD_PRINT_MESSAGE, 1, methodFireMessagePrintEvent)
 	}
 }
