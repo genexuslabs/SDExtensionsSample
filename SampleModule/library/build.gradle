@@ -44,8 +44,11 @@ repositories {
 }
 
 dependencies {
-    //noinspection GradleDynamicVersion
-    implementation 'com.genexus.android:FlexibleClient:+'
+    def fc_version = System.env.FLEXIBLE_CLIENT_VERSION
+    fc_version = fc_version?.trim() ? fc_version.trim() : "+"
+    println "Using Flexible Client version: $fc_version"
+    
+    implementation "com.genexus.android:FlexibleClient:$fc_version"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.8.0'
