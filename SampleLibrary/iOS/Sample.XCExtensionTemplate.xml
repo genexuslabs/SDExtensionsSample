@@ -8,6 +8,7 @@ $if(Main.AppleDevice_iOS)$
 		8C7063D02046EC20008114AC /* BasicUserControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7063CD2046EC1E008114AC /* BasicUserControl.swift */; };
 		8C7063D12046EC20008114AC /* BasicExternalObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7063CE2046EC1F008114AC /* BasicExternalObject.swift */; };
 		8C7063D22046EC20008114AC /* SampleExtensionLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7063CF2046EC20008114AC /* SampleExtensionLibrary.swift */; };
+        BAB143952CD56E200075C638 /* UIAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB143942CD56E200075C638 /* UIAddViewController.swift */; };
 				]]>
 			</PBXBuildFile>
 			<PBXFileReference>
@@ -15,6 +16,7 @@ $if(Main.AppleDevice_iOS)$
 		8C7063CD2046EC1E008114AC /* BasicUserControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasicUserControl.swift; path = ExtensionLibraries/SampleLibrary/BasicUserControl.swift; sourceTree = "<group>"; };
 		8C7063CE2046EC1F008114AC /* BasicExternalObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasicExternalObject.swift; path = ExtensionLibraries/SampleLibrary/BasicExternalObject.swift; sourceTree = "<group>"; };
 		8C7063CF2046EC20008114AC /* SampleExtensionLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SampleExtensionLibrary.swift; path = ExtensionLibraries/SampleLibrary/SampleExtensionLibrary.swift; sourceTree = "<group>"; };
+        BAB143942CD56E200075C638 /* UIAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIAddViewController.swift; path = ExtensionLibraries/SampleLibrary/UIAddViewController.swift; sourceTree = "<group>"; };
 				]]>
 			</PBXFileReference>
 			<PBXGroup>
@@ -30,6 +32,7 @@ $if(Main.AppleDevice_iOS)$
 				8C7063CF2046EC20008114AC /* SampleExtensionLibrary.swift */,
 				8C7063CD2046EC1E008114AC /* BasicUserControl.swift */,
 				8C7063CE2046EC1F008114AC /* BasicExternalObject.swift */,
+                BAB143942CD56E200075C638 /* UIAddViewController.swift */,
 			);
 			name = "Sample Extension Library";
 			sourceTree = "<group>";
@@ -41,6 +44,7 @@ $if(Main.AppleDevice_iOS)$
 				8C7063D22046EC20008114AC /* SampleExtensionLibrary.swift in Sources */,
 				8C7063D02046EC20008114AC /* BasicUserControl.swift in Sources */,
 				8C7063D12046EC20008114AC /* BasicExternalObject.swift in Sources */,
+                BAB143952CD56E200075C638 /* UIAddViewController.swift in Sources */,
 				]]>
 			</PBXSourcesBuildPhase>
 $endif$

@@ -2,6 +2,7 @@
 <CopyList xmlns="http://schemas.genexus.com/ExtensionCopyFile.xsd">
 $if(Main.AppleDevice_iOS)$
 	<CopyFile Name="SampleExtensionLibrary.swift"/>
+    <CopyFile Name="UIAddViewController.swift"/>
 	<CopyFile Name="BasicExternalObject.swift"/>
 	<CopyFile Name="BasicUserControl.swift"/>
 $endif$

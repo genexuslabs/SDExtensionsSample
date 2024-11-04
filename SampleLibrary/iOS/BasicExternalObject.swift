@@ -6,39 +6,111 @@ import GXDataLayer
 import GXStandardClasses
 
 // MARK: - To be called from a User Event
-
+/// This is an external object with examples of different types of methods
 public class BasicExternalObject: GXActionExternalObjectHandler {
 
+    /// This flag enables defining the methods using just a prefix (gxActionExObjMethodHandler_<MethodName>)
 	override public class func handleActionExecutionUsingMethodHandlerSelectorNamePrefix() -> Bool {
 		return true
 	}
 
-	//MARK: - External object methods: Message and Hello
+	//MARK: - External object methods: Hello, Message, UIAdd and PrintMessage
+    
+    /// That's a simple method with no parameters
+    @objc public func gxActionExObjMethodHandler_Hello() {
+        // Showing the Toast with a hardcoded message
+        ToastMessage.showToast(message: "Hello World!",
+                               gxModel: self.actionDesc.gxModel,
+                               uiContext: self.userInterfaceContext)
+        
+        // Finishing the execution of the method
+        self.onFinishedExecutingWithSuccess()
+    }
 
+    /// That's a simple method with a parameter
 	@objc public func gxActionExObjMethodHandler_Message(_ parameters: [Any]) {
+        // Validating if we receive 1 parameter
 		if let error = self.validateNumber(ofParametersReceived: UInt(parameters.count), expected: 1) {
 			self.onFinishedExecutingWithError(error)
 			return
 		}
 		
+        // Trying to retrieve the parameter as a string
 		guard let message = self.stringParameter(self.actionDescParametersArray![0], fromValue: parameters[0]) else {
 			let error = self.invalidParameterErrorValid(forMethod: nil, at: 0, developerDescription: "Message parameter must be a String")
 			self.onFinishedExecutingWithError(error)
 			return
 		}
 		
+        // Showing the Toast with the message
 		ToastMessage.showToast(message: message,
 							   gxModel: self.actionDesc.gxModel,
 							   uiContext: self.userInterfaceContext)
+        
+        // Finishing the execution of the method
 		self.onFinishedExecutingWithSuccess()
     }
-
-	@objc public func gxActionExObjMethodHandler_Hello() {
-		ToastMessage.showToast(message: "Hello World!",
-							   gxModel: self.actionDesc.gxModel,
-							   uiContext: self.userInterfaceContext)
-		self.onFinishedExecutingWithSuccess()
-	}
+    
+    /// That's a method that presents another UIViewController, sends different types of errors, and returns a value
+    @objc public func gxActionExObjMethodHandler_UIAdd(_ parameters: [Any]) {
+        // Validating if we receive 2 parameters
+        if let error = self.validateNumber(ofParametersReceived: UInt(parameters.count), expected: 2) {
+            self.onFinishedExecutingWithError(error)
+            return
+        }
+        
+        // Trying to retrieve the parameters as a int
+        let number1 = self.integerParameter(self.actionDescParametersArray![0], fromValue: parameters[0])
+        let number2 = self.integerParameter(self.actionDescParametersArray![1], fromValue: parameters[1])
+        
+        // Getting the ViewController using GXExecutionEnvironmentHelper
+        let controller: UIViewController? = GXExecutionEnvironmentHelper.allConnectedWindows.compactMapFirst { $0.rootViewController }
+        
+        // Initializing UIAddViewController and setting the handler for success or failure cases
+        let uIAddViewController = UIAddViewController(firstNumber: number1, secondNumber: number2) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+                case .success(let sum):
+                    // In the success case, returning the sum using the setReturnValue function and finishing the method execution
+                    self.setReturnValue(sum)
+                    self.onFinishedExecutingWithSuccess()
+                case .failure(let error):
+                    // In the failure case, evaluating if it's an error to close the UIAddViewController (isUserCancelledError())
+                    if error.isUserCancelledError() {
+                        // If the user closes the UIAddViewController, we finish with success because it's an expected behavior
+                        self.onFinishedExecutingWithSuccess()
+                    } else {
+                        // In any other case, we finish with an error by sending the error type
+                        self.onFinishedExecutingWithError(error)
+                    }
+            }
+        }
+        
+        // Presenting the view controller
+        controller?.present(uIAddViewController, animated: true, completion: nil)
+    }
+    
+    /// That's a simple method that triggers an event of an external object
+    @objc public func gxActionExObjMethodHandler_PrintMessage(_ parameters: [Any]) {
+        // Validating if we receive 1 parameter
+        if let error = self.validateNumber(ofParametersReceived: UInt(parameters.count), expected: 1) {
+            self.onFinishedExecutingWithError(error)
+            return
+        }
+        
+        // Trying to retrieve the parameter as a string
+        guard let message = self.stringParameter(self.actionDescParametersArray![0], fromValue: parameters[0]) else {
+            let error = self.invalidParameterErrorValid(forMethod: nil, at: 0, developerDescription: "messageText parameter must be a String")
+            self.onFinishedExecutingWithError(error)
+            return
+        }
+        
+        // Triggering the BasicExternalObject.OnMessagePrinted event (<ExternalObjectName>.<EventName>)
+        GXActionExObjEventsHelper.dispatchExternalObjectEvent("BasicExternalObject.OnMessagePrinted", withParameters: [message])
+        
+        // Finishing the execution of the method
+        self.onFinishedExecutingWithSuccess()
+    }
 }
 
 // MARK: - Offline support
