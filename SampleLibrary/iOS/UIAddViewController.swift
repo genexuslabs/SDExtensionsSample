@@ -98,7 +98,7 @@ class UIAddViewController: UIViewController {
 			// Validating if the firstAddends is text and if the text is an integer
 			guard let number1Text = self.firstAddends.text,
 				  let number1 = Int(number1Text) else {
-				self.completionBlock(.failure(NSError.defaultGXError(withLocalizedDescription: "The second number you entered was invalid")))
+				self.completionBlock(.failure(NSError.defaultGXError(withLocalizedDescription: "The first number you entered was invalid")))
 				return
 			}
 			
