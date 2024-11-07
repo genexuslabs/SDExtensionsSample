@@ -65,12 +65,24 @@ public class BasicExternalObject: GXActionExternalObjectHandler {
 		let number1 = self.integerParameter(self.actionDescParametersArray![0], fromValue: parameters[0])
 		let number2 = self.integerParameter(self.actionDescParametersArray![1], fromValue: parameters[1])
 		
-		// Getting the ViewController using GXExecutionEnvironmentHelper
-		let controller: UIViewController? = GXExecutionEnvironmentHelper.allConnectedWindows.compactMapFirst { $0.rootViewController }
+		// Getting a presentation handler
+		guard let presentationHandler = gxActionHandlerControllerPresentationHandler else {
+			// Handle presentation handler not available error
+			let error = NSError.defaultGXError(withDeveloperDescription: "No valid presentation handler.")
+			onFinishedExecutingWithError(error)
+			return
+		}
 		
-		// Initializing UIAddViewController and setting the handler for success or failure cases
-		let uIAddViewController = UIAddViewController(firstNumber: number1, secondNumber: number2) { [weak self] result in
+		// Initializing UIAddViewController
+		let uIAddViewController = UIAddViewController(firstNumber: number1, secondNumber: number2)
+		
+		// Setting the handler for success or failure cases
+		uIAddViewController.completionBlock = { [weak self, weak uIAddViewController] result in
 			guard let self = self else { return }
+			
+			// Since we no longer need the modal, we will dismiss it
+			uIAddViewController?.dismiss(animated: true, completion: nil)
+			
 			switch result {
 			case .success(let sum):
 				// In the success case, returning the sum using the setReturnValue function and finishing the method execution
@@ -88,8 +100,17 @@ public class BasicExternalObject: GXActionExternalObjectHandler {
 			}
 		}
 		
+		// Setup the preferred presentation context
+		let pContext = GXPresentationContext(userInterfaceContext: userInterfaceContext)
+		pContext.modal = true
+		
 		// Presenting the view controller
-		controller?.present(uIAddViewController, animated: true, completion: nil)
+		let presented = presentationHandler.gxPresentViewController(uIAddViewController, context: pContext, completion: nil)
+		if !presented {
+			// Handle presentation error
+			let error = NSError.defaultGXError(withDeveloperDescription: "Could not present view controller.")
+			onFinishedExecutingWithError(error)
+		}
 	}
 	
 	
