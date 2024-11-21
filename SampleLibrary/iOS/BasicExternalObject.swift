@@ -53,6 +53,28 @@ public class BasicExternalObject: GXActionExternalObjectHandler {
 		self.onFinishedExecutingWithSuccess()
 	}
 	
+	/// That's a method with 2 parameters and returns a value
+	@objc public func gxActionExObjMethodHandler_AddNumbers(_ parameters: [Any]) {
+		// Validating if we receive exactly 2 parameters
+		if let error = self.validateNumber(ofParametersReceived: UInt(parameters.count), expected: 2) {
+			self.onFinishedExecutingWithError(error)
+			return
+		}
+		
+		// Trying to retrieve the parameters as a int
+		let number1 = self.integerParameter(self.actionDescParametersArray![0], fromValue: parameters[0])
+		let number2 = self.integerParameter(self.actionDescParametersArray![1], fromValue: parameters[1])
+		
+		// Calculating the sum of the two numbers
+		let sum = number1 + number2
+		
+		// Setting the return value to the sum
+		self.setReturnValue(sum)
+		
+		// Indicating that the operation finished successfully
+		self.onFinishedExecutingWithSuccess()
+	}
+	
 	/// That's a method that presents another UIViewController, sends different types of errors, and returns a value
 	@objc public func gxActionExObjMethodHandler_UIAdd(_ parameters: [Any]) {
 		// Validating if we receive 2 parameters
@@ -164,6 +186,16 @@ public class BasicExternalObjectOffline: GXExternalObjectBase {
 		}
 	}
 	
+	@objc(addNumbers::)
+	public class func addNumbers(_ fisrtAddend: Int,_ secondAddend: Int) -> Int {
+		return fisrtAddend + secondAddend
+	}
+	
+	@objc(printMessage:)
+	public class func printMessage(_ message: String) {
+		GXActionExObjEventsHelper.dispatchExternalObjectEvent("BasicExternalObject.OnMessagePrinted", withParameters: [message])
+	}
+	
 }
 
 // MARK: - Toast implementation
@@ -206,3 +238,4 @@ fileprivate class ToastMessage {
 		}
 	}
 }
+
