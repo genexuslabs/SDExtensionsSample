@@ -193,7 +193,7 @@ public class BasicExternalObjectOffline: GXExternalObjectBase {
 	
 	@objc(printMessage:)
 	public class func printMessage(_ message: String) {
-		GXActionExObjEventsHelper.dispatchExternalObjectEvent("BasicExternalObject.OnMessagePrinted", withParameters: [message])
+		BasicExternalObjectOffline().dispatchExteralObjectEvent("OnMessagePrinted", withParameters: [message])
 	}
 	
 }
