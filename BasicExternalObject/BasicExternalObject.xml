@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ExportFile>
+  <KMW>
+    <MajorVersion>4</MajorVersion>
+    <MinorVersion>0</MinorVersion>
+    <Build>184260</Build>
+  </KMW>
+  <Source kb="e6c75911-9d83-4718-9401-880277953bd4" username="LUISDANIELV84C4\luis.villagra" UNCPath="\\LUISDANIELV84C4\C$\KBs\Knowledge Base3">
+    <Version guid="bbe58eb2-4b62-4444-8493-584c863a044c" name="KnowledgeBase3" />
+  </Source>
+  <Objects>
+    <Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="LUISDANIELV84C4\luis.villagra" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2024-11-21T19:52:03.0000000Z" checksum="9241087866737be39bcb0d7f80452bc5" fullyQualifiedName="BasicExternalObject" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="950330a0-3a7f-4713-af9d-c1a334c926f5" name="BasicExternalObject" type="c163e562-42c6-4158-ad83-5b21a14cf30e" description="Basic External Object">
+      <Part type="00000000-0000-0000-0002-000000000005">
+        <ExternalMethods>
+          <ExternalMethod>
+            <Properties><Property><Name>IntName</Name><Value>Hello</Value></Property><Property><Name>ExoMethodIsStatic</Name><Value>True</Value></Property><Property><Name>ExoNameIOS</Name><Value>hello</Value></Property><Property><Name>ExoNameANDROID</Name><Value>hello</Value></Property></Properties>
+          </ExternalMethod>
+          <ExternalMethod>
+            <Parameters>
+              <Parameter>
+                <Properties><Property><Name>ExoParamAccessType</Name><Value>in</Value></Property><Property><Name>IntName</Name><Value>text</Value></Property><Property><Name>ExoItemType</Name><Value>bas:VarChar</Value></Property><Property><Name>ExoItemLength</Name><Value>40</Value></Property><Property><Name>ExoItemExtTypeANDROID</Name><Value>String</Value></Property></Properties>
+              </Parameter>
+            </Parameters>
+            <Properties><Property><Name>IntName</Name><Value>Message</Value></Property><Property><Name>ExoMethodIsStatic</Name><Value>True</Value></Property><Property><Name>ExoNameIOS</Name><Value>message</Value></Property><Property><Name>ExoNameANDROID</Name><Value>message</Value></Property></Properties>
+          </ExternalMethod>
+          <ExternalMethod>
+            <Parameters>
+              <Parameter>
+                <Properties><Property><Name>IntName</Name><Value>firstAddend</Value></Property></Properties>
+              </Parameter>
+              <Parameter>
+                <Properties><Property><Name>IntName</Name><Value>secondAddend</Value></Property></Properties>
+              </Parameter>
+            </Parameters>
+            <Properties><Property><Name>IntName</Name><Value>AddNumbers</Value></Property><Property><Name>ExoItemType</Name><Value>bas:Numeric</Value></Property><Property><Name>ExoItemLength</Name><Value>9</Value></Property><Property><Name>ExoMethodIsStatic</Name><Value>True</Value></Property><Property><Name>ExoNameIOS</Name><Value>addNumbers</Value></Property><Property><Name>ExoNameANDROID</Name><Value>addNumbers</Value></Property></Properties>
+          </ExternalMethod>
+          <ExternalMethod>
+            <Parameters>
+              <Parameter>
+                <Properties><Property><Name>ExoParamAccessType</Name><Value>in</Value></Property><Property><Name>IntName</Name><Value>number1</Value></Property></Properties>
+              </Parameter>
+              <Parameter>
+                <Properties><Property><Name>ExoParamAccessType</Name><Value>in</Value></Property><Property><Name>IntName</Name><Value>number2</Value></Property></Properties>
+              </Parameter>
+            </Parameters>
+            <Properties><Property><Name>IntName</Name><Value>UIAdd</Value></Property><Property><Name>ExoItemType</Name><Value>bas:Numeric</Value></Property><Property><Name>ExoItemLength</Name><Value>9</Value></Property><Property><Name>ExoMethodIsStatic</Name><Value>True</Value></Property><Property><Name>ExoNameIOS</Name><Value /></Property><Property><Name>ExoNameANDROID</Name><Value /></Property></Properties>
+          </ExternalMethod>
+          <ExternalMethod>
+            <Parameters>
+              <Parameter>
+                <Properties><Property><Name>IntName</Name><Value>messageText</Value></Property><Property><Name>ExoItemType</Name><Value>bas:VarChar</Value></Property><Property><Name>ExoItemLength</Name><Value>40</Value></Property><Property><Name>ExoItemExtTypeANDROID</Name><Value>String</Value></Property></Properties>
+              </Parameter>
+            </Parameters>
+            <Properties><Property><Name>IntName</Name><Value>PrintMessage</Value></Property><Property><Name>ExoMethodIsStatic</Name><Value>True</Value></Property><Property><Name>ExoNameIOS</Name><Value>printMessage</Value></Property><Property><Name>ExoNameANDROID</Name><Value>printMessage</Value></Property></Properties>
+          </ExternalMethod>
+        </ExternalMethods>
+        <ExternalEvents>
+          <ExternalEvent>
+            <Parameters>
+              <Parameter>
+                <Properties><Property><Name>IntName</Name><Value>messageText</Value></Property><Property><Name>ExoItemType</Name><Value>bas:VarChar</Value></Property><Property><Name>ExoItemLength</Name><Value>40</Value></Property></Properties>
+              </Parameter>
+            </Parameters>
+            <Properties><Property><Name>IntName</Name><Value>OnMessagePrinted</Value></Property><Property><Name>ExoItemLength</Name><Value>40</Value></Property></Properties>
+          </ExternalEvent>
+        </ExternalEvents>
+        <Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+      </Part>
+      <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+        <Help>
+          <HelpItem>
+            <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-English</Language>
+            <Content />
+          </HelpItem>
+        </Help>
+        <Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+      </Part>
+      <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+        <Properties />
+      </Part>
+      <Properties><Property><Name>Name</Name><Value>BasicExternalObject</Value></Property><Property><Name>ExoNameIOS</Name><Value>BasicExternalObjectOffline</Value></Property><Property><Name>ExoNameANDROID</Name><Value>BasicExternalObjectOffline</Value></Property><Property><Name>AndroidPackageName</Name><Value>com.example.samplemodule</Value></Property><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+    </Object>
+  </Objects>
+  <Dependencies>
+    <Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Object" Id="c163e562-42c6-4158-ad83-5b21a14cf30e">
+      <Properties Name="External Object" PackageName="GenexusBL" />
+    </Reference>
+    <Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Part" Id="00000000-0000-0000-0002-000000000005">
+      <Properties Name="Structure" PackageName="GenexusBL" />
+    </Reference>
+    <Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Part" Id="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+      <Properties Name="Help" PackageName="GenexusBL" />
+    </Reference>
+    <Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Part" Id="babf62c5-0111-49e9-a1c3-cc004d90900a">
+      <Properties Name="Documentation" PackageName="GenexusBL" />
+    </Reference>
+  </Dependencies>
+  <ObjectsIdentityMapping>
+    <ObjectIdentity Type="c88fffcd-b6f8-0000-8fec-00b5497e2117" Name="Root Module" parent="">
+      <Guid>afa47377-41d5-4ae8-9755-6f53150aa361</Guid>
+    </ObjectIdentity>
+  </ObjectsIdentityMapping>
+</ExportFile>
