@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ExportFile>
+  <KMW>
+    <MajorVersion>4</MajorVersion>
+    <MinorVersion>0</MinorVersion>
+    <Build>184260</Build>
+  </KMW>
+  <Source kb="e6c75911-9d83-4718-9401-880277953bd4" username="LUISDANIELV84C4\luis.villagra" UNCPath="\\LUISDANIELV84C4\C$\KBs\Knowledge Base3">
+    <Version guid="bbe58eb2-4b62-4444-8493-584c863a044c" name="KnowledgeBase3" />
+  </Source>
+  <Objects>
+    <Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="LUISDANIELV84C4\luis.villagra" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2024-11-21T19:33:12.0000000Z" checksum="43b855332052d7f299753be2d972015c" fullyQualifiedName="BasicSample" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="b94daf9b-7c8d-42e9-a990-ceed63799189" name="BasicSample" type="d82625fd-5892-40b0-99c9-5c8559c197fc" description="Basic Sample">
+      <Part type="b4378a97-f9b2-4e05-b2f8-c610de258402">
+        <PatternPart type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+          <Data Pattern="15cf49b5-fc38-4899-91b5-395d02d79889" Version="17.11.0"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance>
+  <level id="35f1d266-37ae-4325-bb24-610d7229ceba" name="Level">
+    <detail variables="&lt;Variables&gt;&lt;Variable Id=&quot;10&quot; Name=&quot;eventMessage&quot;&gt;&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;Name&lt;/Name&gt;&lt;Value&gt;eventMessage&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;OBJ_TYPE&lt;/Name&gt;&lt;Value&gt;id_OTYPE_VAR&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ATTCUSTOMTYPE&lt;/Name&gt;&lt;Value&gt;bas:VarChar&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;&lt;Documentation&gt;&amp;lt;WikiPage&amp;gt;&amp;lt;Modified&amp;gt;0001-01-01T00:00:00&amp;lt;/Modified&amp;gt;&amp;lt;Revision&amp;gt;0&amp;lt;/Revision&amp;gt;&amp;lt;/WikiPage&amp;gt;&lt;/Documentation&gt;&lt;/Variable&gt;&lt;Variable Id=&quot;11&quot; Name=&quot;firstAddend&quot;&gt;&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;Name&lt;/Name&gt;&lt;Value&gt;firstAddend&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;OBJ_TYPE&lt;/Name&gt;&lt;Value&gt;id_OTYPE_VAR&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;&lt;Documentation&gt;&amp;lt;WikiPage&amp;gt;&amp;lt;Modified&amp;gt;0001-01-01T00:00:00&amp;lt;/Modified&amp;gt;&amp;lt;Revision&amp;gt;0&amp;lt;/Revision&amp;gt;&amp;lt;/WikiPage&amp;gt;&lt;/Documentation&gt;&lt;/Variable&gt;&lt;Variable Id=&quot;8&quot; Name=&quot;resultado&quot;&gt;&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;Name&lt;/Name&gt;&lt;Value&gt;resultado&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;OBJ_TYPE&lt;/Name&gt;&lt;Value&gt;id_OTYPE_VAR&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;&lt;Documentation&gt;&amp;lt;WikiPage&amp;gt;&amp;lt;Modified&amp;gt;0001-01-01T00:00:00&amp;lt;/Modified&amp;gt;&amp;lt;Revision&amp;gt;0&amp;lt;/Revision&amp;gt;&amp;lt;/WikiPage&amp;gt;&lt;/Documentation&gt;&lt;/Variable&gt;&lt;Variable Id=&quot;12&quot; Name=&quot;secondAddend&quot;&gt;&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;Name&lt;/Name&gt;&lt;Value&gt;secondAddend&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;OBJ_TYPE&lt;/Name&gt;&lt;Value&gt;id_OTYPE_VAR&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;&lt;Documentation&gt;&amp;lt;WikiPage&amp;gt;&amp;lt;Modified&amp;gt;0001-01-01T00:00:00&amp;lt;/Modified&amp;gt;&amp;lt;Revision&amp;gt;0&amp;lt;/Revision&amp;gt;&amp;lt;/WikiPage&amp;gt;&lt;/Documentation&gt;&lt;/Variable&gt;&lt;Variable Id=&quot;7&quot; Name=&quot;tapCount&quot;&gt;&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;Name&lt;/Name&gt;&lt;Value&gt;tapCount&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;OBJ_TYPE&lt;/Name&gt;&lt;Value&gt;id_OTYPE_VAR&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;&lt;Documentation&gt;&amp;lt;WikiPage&amp;gt;&amp;lt;Modified&amp;gt;0001-01-01T00:00:00&amp;lt;/Modified&amp;gt;&amp;lt;Revision&amp;gt;0&amp;lt;/Revision&amp;gt;&amp;lt;/WikiPage&amp;gt;&lt;/Documentation&gt;&lt;/Variable&gt;&lt;Variable Id=&quot;6&quot; Name=&quot;text&quot;&gt;&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;Name&lt;/Name&gt;&lt;Value&gt;text&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;OBJ_TYPE&lt;/Name&gt;&lt;Value&gt;id_OTYPE_VAR&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ATTCUSTOMTYPE&lt;/Name&gt;&lt;Value&gt;bas:VarChar&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Edit&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;&lt;Documentation&gt;&amp;lt;WikiPage&amp;gt;&amp;lt;Modified&amp;gt;0001-01-01T00:00:00&amp;lt;/Modified&amp;gt;&amp;lt;Revision&amp;gt;0&amp;lt;/Revision&amp;gt;&amp;lt;/WikiPage&amp;gt;&lt;/Documentation&gt;&lt;/Variable&gt;&lt;Variable Id=&quot;9&quot; Name=&quot;textMessageForEvent&quot;&gt;&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;Name&lt;/Name&gt;&lt;Value&gt;textMessageForEvent&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;OBJ_TYPE&lt;/Name&gt;&lt;Value&gt;id_OTYPE_VAR&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ATTCUSTOMTYPE&lt;/Name&gt;&lt;Value&gt;bas:VarChar&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;&lt;Documentation&gt;&amp;lt;WikiPage&amp;gt;&amp;lt;Modified&amp;gt;0001-01-01T00:00:00&amp;lt;/Modified&amp;gt;&amp;lt;Revision&amp;gt;0&amp;lt;/Revision&amp;gt;&amp;lt;/WikiPage&amp;gt;&lt;/Documentation&gt;&lt;/Variable&gt;&lt;StandardVariable Id=&quot;4&quot; Name=&quot;Pgmdesc&quot;&gt;&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;Name&lt;/Name&gt;&lt;Value&gt;Pgmdesc&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;OBJ_TYPE&lt;/Name&gt;&lt;Value&gt;id_OTYPE_VAR&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IsStandardVariable&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ATTCUSTOMTYPE&lt;/Name&gt;&lt;Value&gt;bas:Character&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Length&lt;/Name&gt;&lt;Value&gt;256&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;&lt;Documentation&gt;&amp;lt;WikiPage&amp;gt;&amp;lt;Modified&amp;gt;0001-01-01T00:00:00&amp;lt;/Modified&amp;gt;&amp;lt;Revision&amp;gt;0&amp;lt;/Revision&amp;gt;&amp;lt;/WikiPage&amp;gt;&lt;/Documentation&gt;&lt;/StandardVariable&gt;&lt;StandardVariable Id=&quot;3&quot; Name=&quot;Pgmname&quot;&gt;&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;Name&lt;/Name&gt;&lt;Value&gt;Pgmname&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;OBJ_TYPE&lt;/Name&gt;&lt;Value&gt;id_OTYPE_VAR&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IsStandardVariable&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ATTCUSTOMTYPE&lt;/Name&gt;&lt;Value&gt;bas:Character&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Length&lt;/Name&gt;&lt;Value&gt;128&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;&lt;Documentation&gt;&amp;lt;WikiPage&amp;gt;&amp;lt;Modified&amp;gt;0001-01-01T00:00:00&amp;lt;/Modified&amp;gt;&amp;lt;Revision&amp;gt;0&amp;lt;/Revision&amp;gt;&amp;lt;/WikiPage&amp;gt;&lt;/Documentation&gt;&lt;/StandardVariable&gt;&lt;StandardVariable Id=&quot;2&quot; Name=&quot;Time&quot;&gt;&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;Name&lt;/Name&gt;&lt;Value&gt;Time&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;OBJ_TYPE&lt;/Name&gt;&lt;Value&gt;id_OTYPE_VAR&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IsStandardVariable&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ATTCUSTOMTYPE&lt;/Name&gt;&lt;Value&gt;bas:Character&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Length&lt;/Name&gt;&lt;Value&gt;8&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;&lt;Documentation&gt;&amp;lt;WikiPage&amp;gt;&amp;lt;Modified&amp;gt;0001-01-01T00:00:00&amp;lt;/Modified&amp;gt;&amp;lt;Revision&amp;gt;0&amp;lt;/Revision&amp;gt;&amp;lt;/WikiPage&amp;gt;&lt;/Documentation&gt;&lt;/StandardVariable&gt;&lt;StandardVariable Id=&quot;1&quot; Name=&quot;Today&quot;&gt;&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;Name&lt;/Name&gt;&lt;Value&gt;Today&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;OBJ_TYPE&lt;/Name&gt;&lt;Value&gt;id_OTYPE_VAR&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IsStandardVariable&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ATTCUSTOMTYPE&lt;/Name&gt;&lt;Value&gt;bas:Date&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;&lt;Documentation&gt;&amp;lt;WikiPage&amp;gt;&amp;lt;Modified&amp;gt;0001-01-01T00:00:00&amp;lt;/Modified&amp;gt;&amp;lt;Revision&amp;gt;0&amp;lt;/Revision&amp;gt;&amp;lt;/WikiPage&amp;gt;&lt;/Documentation&gt;&lt;/StandardVariable&gt;&lt;/Variables&gt;" events="Event 'Hello Method'&#xA;&#x9;BasicExternalObject.Hello()&#xA;Endevent&#xA;&#xA;Event 'Hello Method Offline'&#xA;&#x9;HelloMethodOffline()&#xA;Endevent&#xA;&#xA;Event 'Message Method'&#xA;&#x9;BasicExternalObject.Message(&amp;text)&#xA;Endevent&#xA;&#xA;Event 'Message Method Offline'&#xA;&#x9;MessageMethodOffline(&amp;text)&#xA;Endevent&#xA;&#xA;Event 'Print Geetings'&#xA;&#x9;BasicUserControl1.SetName(&quot;Developer&quot;)&#xA;Endevent&#xA;&#xA;Event BasicUserControl1.OnTap(&amp;tapCount)&#xA;&#x9;Msg(&quot;Tap count: &quot; + &amp;tapCount)&#xA;EndEvent&#xA;&#xA;Event 'Sum Method'&#xA;&#x9;Composite&#xA;&#x9;&#x9;&amp;resultado = -1&#xA;&#x9;&#x9;&amp;resultado = BasicExternalObject.AddNumbers(&amp;firstAddend, &amp;secondAddend)&#xA;&#x9;&#x9;If &amp;resultado &lt;&gt; -1&#xA;&#x9;&#x9;&#x9;Msg(&amp;resultado.ToString())&#xA;&#x9;&#x9;Endif&#xA;&#x9;endComposite&#xA;Endevent&#xA;&#xA;Event 'Sum Method Offline'&#xA;&#x9;&amp;resultado = -1&#xA;&#x9;AddMethodOffline(&amp;firstAddend, &amp;secondAddend, &amp;resultado)&#xA;&#x9;If &amp;resultado &lt;&gt; -1&#xA;&#x9;&#x9;Msg(&amp;resultado.ToString())&#xA;&#x9;Endif&#xA;Endevent&#xA;&#xA;Event 'UIAdd Method'&#xA;&#x9;Composite&#xA;&#x9;&#x9;&amp;resultado = -1&#xA;&#x9;&#x9;&amp;resultado = BasicExternalObject.UIAdd(&amp;firstAddend, &amp;secondAddend)&#xA;&#x9;&#x9;If &amp;resultado &lt;&gt; -1&#xA;&#x9;&#x9;&#x9;Msg(&amp;resultado.ToString())&#xA;&#x9;&#x9;Endif&#xA;&#x9;endComposite&#xA;Endevent&#xA;&#xA;Event 'PrintMessage Method'&#xA;&#x9;BasicExternalObject.PrintMessage(&amp;textMessageForEvent)&#xA;Endevent&#xA;&#xA;Event 'PrintMessage Method Offline'&#xA;&#x9;PrintMessageMethodOffline(&amp;textMessageForEvent)&#xA;Endevent&#xA;&#xA;Event BasicExternalObject.OnMessagePrinted(&amp;eventMessage)&#xA;&#x9;msg(&amp;eventMessage)&#xA;EndEvent&#xA;">
+      <layout id="795263dd-8a86-5adc-8db3-033fac308318" Type="View">
+        <table id="391dc51d-a931-447d-b300-115a7334e749" controlName="MainTable" columnsStyle="10dip;50%;50%;10dip" responsiveSizes="[]">
+          <row id="7a0d8c2d-9ec5-475f-917e-36d36585efb9" rowHeight="15dip" />
+          <row id="dfc5ba8a-a8ec-4b77-8e4a-929d80ee129f" rowHeight="pd">
+            <cell id="d4481512-cf14-4092-847b-a013707cae74" />
+            <cell id="f1b73298-7a18-4d79-9515-a0ee3a0dfea1" colSpan="1">
+              <action controlName="HelloMethod" onClickEvent="'Hello Method'" />
+            </cell>
+            <cell id="b1ab6e5f-5e14-4b5f-bc0c-7de0e0f18cc1">
+              <action controlName="HelloMethodOffline" onClickEvent="'Hello Method Offline'" />
+            </cell>
+            <cell id="219a837c-985f-4858-a928-986a85717eee" />
+          </row>
+          <row id="42cfaac2-fb66-4411-873b-ef1b0e45fd09" rowHeight="20dip" />
+          <row id="b7805fdc-6984-4039-9204-2fadbe008942" rowHeight="pd">
+            <cell id="1931ea42-461b-4ef0-9fcf-2b5cc113a67c" />
+            <cell id="003ee656-c52b-4be9-821b-876d026bad9c">
+              <data attribute="&amp;text" labelCaption="Menssage" />
+            </cell>
+          </row>
+          <row id="88f991d2-6762-4679-ba31-90e894bce422" rowHeight="pd">
+            <cell id="1fe07429-b4e8-4254-b974-3017420ee3f9" />
+            <cell id="f4e6df37-c149-45c7-8a0f-6a0640ffd7b7">
+              <action controlName="MessageMethod" onClickEvent="'Message Method'" />
+            </cell>
+            <cell id="564d4857-ac29-44ed-b2a4-9c7e5abb5012">
+              <action controlName="MessageMethodOffline" onClickEvent="'Message Method Offline'" />
+            </cell>
+          </row>
+          <row id="7de8d6c4-7331-4b23-a761-5b0633488027" rowHeight="20dip" />
+          <row id="0200bbfb-ec77-4eec-988e-123db4179d6e" rowHeight="pd">
+            <cell id="cabf6bf2-57b2-41b0-8690-b31d623a8ddc" />
+            <cell id="73ed391a-9e74-40a5-8204-29397a7c084f">
+              <uc controlName="BasicUserControl1" controlType="-1875306035" />
+            </cell>
+            <cell id="9fd66a64-b0f0-4015-a572-c6985de05228">
+              <action controlName="PrintGeetings" onClickEvent="'Print Geetings'" />
+            </cell>
+          </row>
+          <row id="da2f57cb-e850-439e-aa2d-570709c911f8" rowHeight="20dip" />
+          <row id="42b84c91-f90a-4729-8e5c-319c1d020230">
+            <cell id="a2dddc66-258d-4245-841f-d5177f9288cc" />
+            <cell id="574a8d37-7b59-4da6-b720-d7f59761b505">
+              <data attribute="&amp;firstAddend" labelCaption="First Addend" />
+            </cell>
+            <cell id="e115e8f9-156e-431a-972b-28f7a779a5b0">
+              <data attribute="&amp;secondAddend" labelCaption="Second Addend" />
+            </cell>
+          </row>
+          <row id="d3facd49-0351-4165-abdb-07f16d34c6e5" rowHeight="pd">
+            <cell id="21b34a0c-b305-4c3c-98f0-b7411305e24f" />
+            <cell id="d240e0da-fdd7-4330-91d4-fb4e80d2651c">
+              <action controlName="SumMethod" onClickEvent="'Sum Method'" />
+            </cell>
+            <cell id="2f097154-726a-45d4-bc47-1ef535f1f942">
+              <action controlName="ButtonSumOffline" onClickEvent="'Sum Method Offline'" caption="Sum Method Offline" />
+            </cell>
+          </row>
+          <row id="143e5d1a-0b44-4caa-8da7-99b5f2aa86c4">
+            <cell id="6c90bb17-47e8-4116-b0d8-f1eba2a6d15b" />
+            <cell id="a4c3b41e-8966-4e3d-9d43-22d390c58c39">
+              <action controlName="ButtonSum" onClickEvent="'UIAdd Method'" caption="Sum UI" />
+            </cell>
+          </row>
+          <row id="d50a8941-7fb8-434d-b8e6-4e710a94c9d0" rowHeight="20dip" />
+          <row id="66f2fd1f-1a54-40c3-8e92-b6a939493fcc" rowHeight="pd">
+            <cell id="8d6cf675-62b4-4560-a47d-c6a7949635d4" />
+            <cell id="b377493f-46c8-452f-8393-fc5c94ba670e" colSpan="1" hAlign="Default" vAlign="Default">
+              <data attribute="&amp;textMessageForEvent" labelCaption="Write the message here" />
+            </cell>
+          </row>
+          <row id="edb8df96-2fd1-4da9-94b4-6abf4996e5d5">
+            <cell id="0ec393e7-fe71-41d4-beda-b90283f14ded" />
+            <cell id="ade274c0-b46a-44f0-95ef-c21a609650b2">
+              <action controlName="FireOnMessagePrinted" onClickEvent="'PrintMessage Method'" caption="PrintMessage Method" />
+            </cell>
+            <cell id="4098a745-41db-49fc-9499-854b144aa3a8">
+              <action controlName="PrintMessageMethodOffline" onClickEvent="'PrintMessage Method Offline'" />
+            </cell>
+          </row>
+        </table>
+      </layout>
+    </detail>
+  </level>
+</instance>]]></Data>
+          <Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+        </PatternPart>
+        <Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+      </Part>
+      <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+        <Properties />
+      </Part>
+      <Properties><Property><Name>Name</Name><Value>BasicSample</Value></Property><Property><Name>IsDefault</Name><Value>False</Value></Property><Property><Name>IsMain</Name><Value>True</Value></Property><Property><Name>idConnectivitySupport</Name><Value>idOffline</Value></Property><Property><Name>AndroidBaseStyle</Name><Value>AndroidBaseStyleDark</Value></Property><Property><Name>Synchronizer</Name><Value>70b6075c-331c-0000-0038-ac3b65316dd0-BasicSampleOfflineDatabase</Value></Property><Property><Name>LogLevelDefault</Name><Value>Debug</Value></Property></Properties>
+    </Object>
+    <Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="LUISDANIELV84C4\luis.villagra" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2024-11-21T19:33:12.0000000Z" checksum="f6bb9b6ec12fca1ea4c2ce00eedc7ffc" fullyQualifiedName="AddMethodOffline" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="eee13fa1-6d7d-4b6b-9ea2-9ab5b1d6d733" name="AddMethodOffline" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Add Method Offline">
+      <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+        <Source><![CDATA[&sum = BasicExternalObject.AddNumbers(&firstAddend, &secondAddend)
+]]></Source>
+        <Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+      </Part>
+      <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+        <Properties />
+      </Part>
+      <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+        <Source><![CDATA[Parm(in:&firstAddend, in:&secondAddend, out:&sum);
+]]></Source>
+        <Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+      </Part>
+      <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+        <Source><![CDATA[]]></Source>
+        <Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+      </Part>
+      <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+        <Variable Name="firstAddend">
+          <Documentation />
+          <Properties><Property><Name>Name</Name><Value>firstAddend</Value></Property><Property><Name>ATTCUSTOMTYPE</Name><Value>bas:Numeric</Value></Property><Property><Name>Length</Name><Value>8</Value></Property><Property><Name>AttMaxLen</Name><Value>8</Value></Property></Properties>
+        </Variable>
+        <Variable Name="secondAddend">
+          <Documentation />
+          <Properties><Property><Name>Name</Name><Value>secondAddend</Value></Property><Property><Name>ATTCUSTOMTYPE</Name><Value>bas:Numeric</Value></Property><Property><Name>Length</Name><Value>8</Value></Property><Property><Name>AttMaxLen</Name><Value>8</Value></Property></Properties>
+        </Variable>
+        <Variable Name="sum">
+          <Documentation />
+          <Properties><Property><Name>Name</Name><Value>sum</Value></Property><Property><Name>ATTCUSTOMTYPE</Name><Value>bas:Numeric</Value></Property><Property><Name>Length</Name><Value>9</Value></Property><Property><Name>AttMaxLen</Name><Value>9</Value></Property></Properties>
+        </Variable>
+        <Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+      </Part>
+      <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+        <Help>
+          <HelpItem>
+            <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-English</Language>
+            <Content />
+          </HelpItem>
+        </Help>
+        <Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+      </Part>
+      <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+        <Properties />
+      </Part>
+      <Properties><Property><Name>Name</Name><Value>AddMethodOffline</Value></Property><Property><Name>idConnectivitySupport</Name><Value>idOffline</Value></Property><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+    </Object>
+    <Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="ARTECH\jpgonzalez" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2021-04-28T18:15:14.0000000Z" checksum="cb056f4ae699be8db6adc2e3e65aeb37" fullyQualifiedName="HelloMethodOffline" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="a2f081d1-d76e-4225-993b-b36b4308a837" name="HelloMethodOffline" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Hello Method Offline">
+      <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+        <Source><![CDATA[BasicExternalObject.Hello()
+]]></Source>
+        <Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+      </Part>
+      <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+        <Properties />
+      </Part>
+      <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+        <Source><![CDATA[]]></Source>
+        <Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+      </Part>
+      <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+        <Source><![CDATA[]]></Source>
+        <Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+      </Part>
+      <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+        <Properties />
+      </Part>
+      <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+        <Help>
+          <HelpItem>
+            <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-English</Language>
+            <Content />
+          </HelpItem>
+        </Help>
+        <Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+      </Part>
+      <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+        <Properties />
+      </Part>
+      <Properties><Property><Name>Name</Name><Value>HelloMethodOffline</Value></Property><Property><Name>idConnectivitySupport</Name><Value>idOffline</Value></Property><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+    </Object>
+    <Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="ARTECH\jpgonzalez" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2023-11-23T00:02:51.0000000Z" checksum="8f6136e8d5fca0d1dd17237d2d0d6be1" fullyQualifiedName="MessageMethodOffline" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="4a7596c0-e519-4b9e-a44e-d5fddf1b932a" name="MessageMethodOffline" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Message Method Offline">
+      <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+        <Source><![CDATA[BasicExternalObject.Message(&Text)
+]]></Source>
+        <Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+      </Part>
+      <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+        <Properties />
+      </Part>
+      <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+        <Source><![CDATA[parm(in:&Text);
+]]></Source>
+        <Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+      </Part>
+      <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+        <Source><![CDATA[]]></Source>
+        <Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+      </Part>
+      <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+        <Variable Name="Text">
+          <Documentation />
+          <Properties><Property><Name>Name</Name><Value>Text</Value></Property><Property><Name>ATTCUSTOMTYPE</Name><Value>bas:VarChar</Value></Property></Properties>
+        </Variable>
+        <Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+      </Part>
+      <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+        <Help>
+          <HelpItem>
+            <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-English</Language>
+            <Content />
+          </HelpItem>
+        </Help>
+        <Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+      </Part>
+      <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+        <Properties />
+      </Part>
+      <Properties><Property><Name>Name</Name><Value>MessageMethodOffline</Value></Property><Property><Name>idConnectivitySupport</Name><Value>idOffline</Value></Property><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+    </Object>
+    <Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="LUISDANIELV84C4\luis.villagra" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2024-11-21T17:30:10.0000000Z" checksum="d94a82dcafabee1e5808a0c368eafc41" fullyQualifiedName="PrintMessageMethodOffline" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="7b965885-27f7-451c-b4b7-7f6f2a391020" name="PrintMessageMethodOffline" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Print Message Method Offline">
+      <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+        <Source><![CDATA[BasicExternalObject.PrintMessage(&Text)
+]]></Source>
+        <Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+      </Part>
+      <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+        <Properties />
+      </Part>
+      <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+        <Source><![CDATA[parm(in:&Text);
+]]></Source>
+        <Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+      </Part>
+      <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+        <Source><![CDATA[]]></Source>
+        <Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+      </Part>
+      <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+        <Variable Name="Text">
+          <Documentation />
+          <Properties><Property><Name>Name</Name><Value>Text</Value></Property><Property><Name>ATTCUSTOMTYPE</Name><Value>bas:VarChar</Value></Property></Properties>
+        </Variable>
+        <Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+      </Part>
+      <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+        <Help>
+          <HelpItem>
+            <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-English</Language>
+            <Content />
+          </HelpItem>
+        </Help>
+        <Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+      </Part>
+      <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+        <Properties />
+      </Part>
+      <Properties><Property><Name>Name</Name><Value>PrintMessageMethodOffline</Value></Property><Property><Name>idConnectivitySupport</Name><Value>idOffline</Value></Property><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+    </Object>
+  </Objects>
+  <Dependencies>
+    <Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Object" Id="d82625fd-5892-40b0-99c9-5c8559c197fc">
+      <Properties Name="Panel" PackageName="GeneXus Patterns" />
+    </Reference>
+    <Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Part" Id="b4378a97-f9b2-4e05-b2f8-c610de258402">
+      <Properties Name="SDPattern Part" PackageName="GeneXus Patterns" />
+    </Reference>
+    <Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Part" Id="babf62c5-0111-49e9-a1c3-cc004d90900a">
+      <Properties Name="Documentation" PackageName="GenexusBL" />
+    </Reference>
+    <Reference Package="df0eb164-d030-4b53-b022-0ea225fb61d6" Type="Pattern" Id="15cf49b5-fc38-4899-91b5-395d02d79889">
+      <Properties Description="Work With" Provider="GeneXus" Version="17.0.0" />
+    </Reference>
+    <Reference Package="df0eb164-d030-4b53-b022-0ea225fb61d6" Type="15cf49b5-fc38-4899-91b5-395d02d79889.UserControl" Id="BasicUserControl" />
+    <Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Object" Id="84a12160-f59b-4ad7-a683-ea4481ac23e9">
+      <Properties Name="Procedure" PackageName="GenexusBL" />
+    </Reference>
+    <Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Part" Id="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+      <Properties Name="Source" PackageName="GenexusBL" />
+    </Reference>
+    <Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Part" Id="c414ed00-8cc4-4f44-8820-4baf93547173">
+      <Properties Name="Layout" PackageName="GenexusBL" />
+    </Reference>
+    <Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Part" Id="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+      <Properties Name="Rules" PackageName="GenexusBL" />
+    </Reference>
+    <Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Part" Id="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+      <Properties Name="Conditions" PackageName="GenexusBL" />
+    </Reference>
+    <Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Part" Id="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Properties Name="Variables" PackageName="GenexusBL" />
+    </Reference>
+    <Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Part" Id="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+      <Properties Name="Help" PackageName="GenexusBL" />
+    </Reference>
+  </Dependencies>
+  <ObjectsIdentityMapping>
+    <ObjectIdentity Type="c88fffcd-b6f8-0000-8fec-00b5497e2117" Name="Root Module" parent="">
+      <Guid>afa47377-41d5-4ae8-9755-6f53150aa361</Guid>
+    </ObjectIdentity>
+    <ObjectIdentity Type="c163e562-42c6-4158-ad83-5b21a14cf30e" Name="BasicExternalObject" parent="">
+      <Guid>950330a0-3a7f-4713-af9d-c1a334c926f5</Guid>
+    </ObjectIdentity>
+    <ObjectIdentity Type="ecececec-dfe0-4a57-ae8f-c6e31b0dcbc0" Name="Default" parent="">
+      <Guid>58d4849e-1d43-416f-bc3b-7ea5b6a9a1b6</Guid>
+    </ObjectIdentity>
+    <ObjectIdentity Type="70b6075c-331c-0000-0038-ac3b65316dd0" Name="BasicSampleOfflineDatabase" parent="">
+      <Guid>2222162c-1836-463c-b1e6-cc34bd6454e9</Guid>
+    </ObjectIdentity>
+  </ObjectsIdentityMapping>
+</ExportFile>
