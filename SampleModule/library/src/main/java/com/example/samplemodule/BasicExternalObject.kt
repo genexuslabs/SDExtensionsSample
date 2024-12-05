@@ -21,7 +21,7 @@ class BasicExternalObject(action: ApiAction) : ExternalApi(action) {
 		ExternalApiResult.SUCCESS_CONTINUE
 	}
 
-	private val methodActivityAdd = object : IMethodInvokerWithActivityResult {
+	private val methodActivityAddNumbersWithUI = object : IMethodInvokerWithActivityResult {
 		override fun invoke(parameters: MutableList<Any>?): ExternalApiResult {
 			val intent = Intent(context, ActivityAddNumbers::class.java)
 			val number1 = parameters?.get(0).toString().toInt()
@@ -44,6 +44,13 @@ class BasicExternalObject(action: ApiAction) : ExternalApi(action) {
 		}
 	}
 
+	private val methodAddNumbers = IMethodInvoker { parameters ->
+		val addend1 = parameters?.get(0).toString().toInt()
+		val addend2 = parameters?.get(1).toString().toInt()
+		val result = addend1 + addend2
+		ExternalApiResult.success(result)
+	}
+
 	private val methodFireMessagePrintEvent = IMethodInvoker { parameters ->
 		val message = parameters[0].toString()
 		val event = ExternalObjectEvent(NAME, EVENT_NAME_ON_MESSAGE_PRINTED)
@@ -56,7 +63,8 @@ class BasicExternalObject(action: ApiAction) : ExternalApi(action) {
 		const val NAME = "BasicExternalObject"
 		private const val METHOD_HELLO = "Hello"
 		private const val METHOD_MESSAGE = "Message"
-		private const val METHOD_UI_ADD = "UIAdd"
+		private const val METHOD_UI_ADD_NUMBERS = "UIAdd"
+		private const val METHOD_ADD_NUMBERS = "AddNumbers"
 		private const val METHOD_PRINT_MESSAGE = "PrintMessage"
 
 		private const val EVENT_NAME_ON_MESSAGE_PRINTED = "OnMessagePrinted"
@@ -67,7 +75,8 @@ class BasicExternalObject(action: ApiAction) : ExternalApi(action) {
 	init {
 		addMethodHandler(METHOD_HELLO, 0, methodHello)
 		addMethodHandler(METHOD_MESSAGE, 1, methodMessage)
-		addMethodHandler(METHOD_UI_ADD, 2, methodActivityAdd)
+		addMethodHandler(METHOD_UI_ADD_NUMBERS, 2, methodActivityAddNumbersWithUI)
+		addMethodHandler(METHOD_ADD_NUMBERS, 2, methodAddNumbers)
 		addMethodHandler(METHOD_PRINT_MESSAGE, 1, methodFireMessagePrintEvent)
 	}
 }
