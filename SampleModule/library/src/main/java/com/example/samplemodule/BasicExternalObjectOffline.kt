@@ -14,7 +14,7 @@ class BasicExternalObjectOffline {
 
 		@JvmStatic
 		fun message(text: String) {
-			Services.Messages.showMessage(text + "V1")
+			Services.Messages.showMessage(text)
 		}
 
 		@JvmStatic
