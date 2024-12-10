@@ -27,10 +27,10 @@ For more details see:
 
 ### Import the External Object definition in GeneXus
 - Open GeneXus and open the KB to work with.
-- Import the _BasicExternalObject_ definition from `BasicExternalObject\BasicExternalObject.xpz`.
+- Import the _BasicExternalObject_ definition from `BasicExternalObject\BasicExternalObject.xml`.
 
 ### Import the sample app (optional).
-To try out the _BasicUserControl_ and _BasicExternalObject_ samples you may wish to import the sample app from `SampleApp\BasicSample.xpz`.
+To try out the _BasicUserControl_ and _BasicExternalObject_ samples you may wish to import the sample app from `SampleApp\BasicSample.xml`.
 
 ## Android specific
 
