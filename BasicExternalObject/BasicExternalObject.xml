@@ -3,13 +3,13 @@
   <KMW>
     <MajorVersion>4</MajorVersion>
     <MinorVersion>0</MinorVersion>
-    <Build>184260</Build>
+    <Build>185676</Build>
   </KMW>
-  <Source kb="e6c75911-9d83-4718-9401-880277953bd4" username="LUISDANIELV84C4\luis.villagra" UNCPath="\\LUISDANIELV84C4\C$\KBs\Knowledge Base3">
-    <Version guid="bbe58eb2-4b62-4444-8493-584c863a044c" name="KnowledgeBase3" />
+  <Source kb="85b5dfad-0c67-49a0-8a4e-7d61a7868e53" username="GLOBANT\alfonso.irazabal" UNCPath="\\UY-IT03408\C$\KBs\SDExtensionsSample">
+    <Version guid="bbe58eb2-4b62-4444-8493-584c863a044c" name="SDExtensionsSample" />
   </Source>
   <Objects>
-    <Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="LUISDANIELV84C4\luis.villagra" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2024-11-21T19:52:03.0000000Z" checksum="9241087866737be39bcb0d7f80452bc5" fullyQualifiedName="BasicExternalObject" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="950330a0-3a7f-4713-af9d-c1a334c926f5" name="BasicExternalObject" type="c163e562-42c6-4158-ad83-5b21a14cf30e" description="Basic External Object">
+    <Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="GLOBANT\alfonso.irazabal" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2024-12-10T13:53:37.0000000Z" checksum="a37d4a20e1fc2c612cbb512b10bd9dc6" fullyQualifiedName="BasicExternalObject" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="950330a0-3a7f-4713-af9d-c1a334c926f5" name="BasicExternalObject" type="c163e562-42c6-4158-ad83-5b21a14cf30e" description="Basic External Object">
       <Part type="00000000-0000-0000-0002-000000000005">
         <ExternalMethods>
           <ExternalMethod>
@@ -26,10 +26,10 @@
           <ExternalMethod>
             <Parameters>
               <Parameter>
-                <Properties><Property><Name>IntName</Name><Value>firstAddend</Value></Property></Properties>
+                <Properties><Property><Name>ExoParamAccessType</Name><Value>in</Value></Property><Property><Name>IntName</Name><Value>firstAddend</Value></Property></Properties>
               </Parameter>
               <Parameter>
-                <Properties><Property><Name>IntName</Name><Value>secondAddend</Value></Property></Properties>
+                <Properties><Property><Name>ExoParamAccessType</Name><Value>in</Value></Property><Property><Name>IntName</Name><Value>secondAddend</Value></Property></Properties>
               </Parameter>
             </Parameters>
             <Properties><Property><Name>IntName</Name><Value>AddNumbers</Value></Property><Property><Name>ExoItemType</Name><Value>bas:Numeric</Value></Property><Property><Name>ExoItemLength</Name><Value>9</Value></Property><Property><Name>ExoMethodIsStatic</Name><Value>True</Value></Property><Property><Name>ExoNameIOS</Name><Value>addNumbers</Value></Property><Property><Name>ExoNameANDROID</Name><Value>addNumbers</Value></Property></Properties>
@@ -48,7 +48,7 @@
           <ExternalMethod>
             <Parameters>
               <Parameter>
-                <Properties><Property><Name>IntName</Name><Value>messageText</Value></Property><Property><Name>ExoItemType</Name><Value>bas:VarChar</Value></Property><Property><Name>ExoItemLength</Name><Value>40</Value></Property><Property><Name>ExoItemExtTypeANDROID</Name><Value>String</Value></Property></Properties>
+                <Properties><Property><Name>ExoParamAccessType</Name><Value>in</Value></Property><Property><Name>IntName</Name><Value>messageText</Value></Property><Property><Name>ExoItemType</Name><Value>bas:VarChar</Value></Property><Property><Name>ExoItemLength</Name><Value>40</Value></Property><Property><Name>ExoItemExtTypeANDROID</Name><Value>String</Value></Property></Properties>
               </Parameter>
             </Parameters>
             <Properties><Property><Name>IntName</Name><Value>PrintMessage</Value></Property><Property><Name>ExoMethodIsStatic</Name><Value>True</Value></Property><Property><Name>ExoNameIOS</Name><Value>printMessage</Value></Property><Property><Name>ExoNameANDROID</Name><Value>printMessage</Value></Property></Properties>
@@ -58,7 +58,7 @@
           <ExternalEvent>
             <Parameters>
               <Parameter>
-                <Properties><Property><Name>IntName</Name><Value>messageText</Value></Property><Property><Name>ExoItemType</Name><Value>bas:VarChar</Value></Property><Property><Name>ExoItemLength</Name><Value>40</Value></Property></Properties>
+                <Properties><Property><Name>ExoParamAccessType</Name><Value>in</Value></Property><Property><Name>IntName</Name><Value>messageText</Value></Property><Property><Name>ExoItemType</Name><Value>bas:VarChar</Value></Property><Property><Name>ExoItemLength</Name><Value>40</Value></Property></Properties>
               </Parameter>
             </Parameters>
             <Properties><Property><Name>IntName</Name><Value>OnMessagePrinted</Value></Property><Property><Name>ExoItemLength</Name><Value>40</Value></Property></Properties>
