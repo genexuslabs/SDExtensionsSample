@@ -67,7 +67,7 @@ class BasicExternalObject(action: ApiAction) : ExternalApi(action) {
 		private const val METHOD_ADD_NUMBERS = "AddNumbers"
 		private const val METHOD_PRINT_MESSAGE = "PrintMessage"
 
-		private const val EVENT_NAME_ON_MESSAGE_PRINTED = "OnMessagePrinted"
+		internal const val EVENT_NAME_ON_MESSAGE_PRINTED = "OnMessagePrinted"
 
 		private const val METHOD_ACTIVITY_REQUEST_CODE = 4364
 	}
