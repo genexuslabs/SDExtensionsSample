@@ -2,12 +2,12 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion ANDROID_COMPILE_SDK_VERSION
+    compileSdk ANDROID_COMPILE_SDK_VERSION
     namespace "com.example.genexusmodule"
 
     defaultConfig {
-        minSdkVersion ANDROID_MIN_SDK_VERSION
-        targetSdkVersion ANDROID_TARGET_SDK_VERSION
+        minSdk ANDROID_MIN_SDK_VERSION
+        targetSdk ANDROID_TARGET_SDK_VERSION
         versionCode 1
         versionName "1.0"
         vectorDrawables {
