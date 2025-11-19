@@ -1,9 +1,6 @@
-plugins {
-    id("org.jetbrains.kotlin.plugin.compose")
-}
-
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'org.jetbrains.kotlin.plugin.compose'
 
 android {
     compileSdk ANDROID_COMPILE_SDK_VERSION
