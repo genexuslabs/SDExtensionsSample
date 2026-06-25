@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
 apply plugin: 'org.jetbrains.kotlin.plugin.compose'
 
 android {
@@ -19,9 +18,6 @@ android {
     compileOptions {
         sourceCompatibility ANDROID_JAVA_VERSION
         targetCompatibility ANDROID_JAVA_VERSION
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
     }
     buildFeatures {
         compose true
