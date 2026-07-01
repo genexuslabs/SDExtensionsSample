@@ -23,7 +23,7 @@ For more details see:
 
 ### Import the User Control definition in GeneXus
 - Copy the `BasicUserControl` directory to the `UserControls` directory in your GeneXus installation.
-- Run `genexus.exe /install` in a command line in the Genexus installation directory.
+- Run `genexus.exe /install` in a command line in the GeneXus installation directory.
 
 ### Import the External Object definition in GeneXus
 - Open GeneXus and open the KB to work with.
@@ -52,6 +52,21 @@ To try out the _BasicUserControl_ and _BasicExternalObject_ samples you may wish
 
 ### External Objects
 - [External Object definition](http://wiki.genexus.com/commwiki/servlet/wiki?6148)
+
+## Trademarks
+
+GeneXus is a registered trademark of GeneXus S.A. Use of the GeneXus name, logo, or related trademarks must comply with GeneXus S.A.'s trademark guidelines. This project is not officially endorsed by or affiliated with GeneXus S.A. beyond being published by its engineering teams.
+
+Third-party trademarks referenced in this project are the property of their respective owners:
+
+- **Android** is a trademark of Google LLC.
+- **Google** and **Google Play** are trademarks of Google LLC.
+- **Kotlin** is a trademark of the Kotlin Foundation, developed by JetBrains s.r.o.
+- **Gradle** is a trademark of Gradle, Inc.
+- **iOS**, **macOS**, **Swift**, and **Xcode** are trademarks of Apple Inc.
+- **Maven** is a trademark of the Apache Software Foundation.
+
+References to these names are for descriptive purposes only and do not imply any endorsement by or affiliation with the respective trademark owners.
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE.txt) file for more details.

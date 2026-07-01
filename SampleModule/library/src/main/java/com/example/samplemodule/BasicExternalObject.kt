@@ -6,7 +6,7 @@ import com.genexus.android.core.actions.ApiAction
 import com.genexus.android.core.base.services.Services
 import com.genexus.android.core.externalapi.ExternalApi
 import com.genexus.android.core.externalapi.ExternalApiResult
-import com.example.genexusmodule.R
+import com.example.samplemodule.R
 import com.genexus.android.core.actions.ExternalObjectEvent
 
 class BasicExternalObject(action: ApiAction) : ExternalApi(action) {

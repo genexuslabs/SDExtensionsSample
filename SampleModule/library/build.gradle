@@ -3,7 +3,7 @@ apply plugin: 'org.jetbrains.kotlin.plugin.compose'
 
 android {
     compileSdk ANDROID_COMPILE_SDK_VERSION
-    namespace "com.example.genexusmodule"
+    namespace "com.example.samplemodule"
 
     defaultConfig {
         minSdk ANDROID_MIN_SDK_VERSION

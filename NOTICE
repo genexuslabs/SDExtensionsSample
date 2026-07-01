@@ -1,0 +1,47 @@
+GeneXus Native Mobile Extension Sample
+Copyright (c) 2016-2026 GeneXus S.A.
+
+This product is licensed under the MIT License. See the LICENSE.txt file for details.
+
+---
+
+This project includes or references the following third-party software and trademarks:
+
+Android SDK / AndroidX / Jetpack
+  Copyright (c) Google LLC
+  Licensed under the Apache License, Version 2.0
+  Android is a trademark of Google LLC.
+  https://developer.android.com/
+
+Google Material Components for Android
+  Copyright (c) Google LLC
+  Licensed under the Apache License, Version 2.0
+  https://github.com/material-components/material-components-android
+
+Kotlin
+  Copyright (c) JetBrains s.r.o. and the Kotlin Programming Language contributors
+  Licensed under the Apache License, Version 2.0
+  Kotlin is a trademark of the Kotlin Foundation.
+  https://kotlinlang.org/
+
+Gradle
+  Copyright (c) Gradle, Inc.
+  Licensed under the Apache License, Version 2.0
+  Gradle is a trademark of Gradle, Inc.
+  https://gradle.org/
+
+Swift / iOS SDK / Xcode
+  Copyright (c) Apple Inc.
+  iOS, macOS, Swift, and Xcode are trademarks of Apple Inc.
+  https://developer.apple.com/
+
+Apache Maven
+  Copyright (c) The Apache Software Foundation
+  Licensed under the Apache License, Version 2.0
+  Maven is a trademark of the Apache Software Foundation.
+  https://maven.apache.org/
+
+---
+
+GeneXus is a registered trademark of GeneXus S.A.
+All other trademarks are the property of their respective owners.

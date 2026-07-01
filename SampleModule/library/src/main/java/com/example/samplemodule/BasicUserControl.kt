@@ -9,7 +9,7 @@ import com.genexus.android.core.base.metadata.expressions.Expression
 import com.genexus.android.core.base.metadata.layout.LayoutItemDefinition
 import com.genexus.android.core.controls.IGxEdit
 import com.genexus.android.core.ui.Coordinator
-import com.example.genexusmodule.R
+import com.example.samplemodule.R
 
 @Suppress("ViewConstructor", "UNUSED_PARAMETER")
 class BasicUserControl(
